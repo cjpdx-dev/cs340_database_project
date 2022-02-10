@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Customers</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
-  
+
   <body>
     <script src="customers.js"></script>
 
-    <h1> CookNooks: Database Interface </h1>
+    <h1>CookNooks: Database Interface</h1>
 
     <nav>
       <ul>
-        <li> <a href="index.html"> Home Page </a> </li>
+        <li><a href="index.html"> Home Page </a></li>
         |
-        <li> <a href="customers.html">Customers</a> </li>
+        <li><a href="customers.html">Customers</a></li>
         |
-        <li> <a href="emails.html"> Transactions </a> </li>
+        <li><a href="emails.html"> Transactions </a></li>
         |
-        <li> <a href="addresses.html">Addresses</a> </li>
+        <li><a href="addresses.html">Addresses</a></li>
         |
-        <li> <a href="orders.html"> Orders </a> </li>
+        <li><a href="orders.html"> Orders </a></li>
         |
-        <li> <a href="shipments.html"> Shipments </a> </li>
+        <li><a href="shipments.html"> Shipments </a></li>
         |
-        <li> <a href="products.html"> Products </a> </li>
+        <li><a href="products.html"> Products </a></li>
         |
-        <li> <a href="product-prices.html"> Product Prices </a> </li>
+        <li><a href="product-prices.html"> Product Prices </a></li>
         |
-        <li> <a href="transactions.html"> Transactions </a> </li>
+        <li><a href="transactions.html"> Transactions </a></li>
         |
-        <li> <a href="pay-methods.html"> Pay Methods </a> </li>
-  
+        <li><a href="pay-methods.html"> Pay Methods </a></li>
       </ul>
     </nav>
 
     <main>
-      <h2> Customers </h2>
+      <h2>Customers</h2>
     </main>
 
+    <form>
+      <label for="customer_id">Customer ID:</label><br />
+      <input type="text" id="customer_id" name="customer_id" /><br />
+      <label for="fname">First Name:</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+      <label for="lname">Last Name:</label><br />
+      <input type="text" id="lname" name="lname" /><br />
+      <label for="dob">Date of Birth:</label><br />
+      <input type="text" id="dob" name="dob" /> <br />
+      <label for="email">Email:</label><br />
+      <input type="text" id="email" name="email" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
   </body>
-
-
 </html>
