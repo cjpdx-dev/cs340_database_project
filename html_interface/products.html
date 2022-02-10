@@ -103,13 +103,21 @@
 
 
       <h3> Update Product Stock </h3>
+      <h4> (Select a row in the above table first) </h4>
       
       <form>
 
-        <input type="checkbox" id="stock_qty" name="stock_qty" value="edit_stock">
-        <label for="stock_qty"> Edit Stock Quantity </label>
+        <label for="static-product-id"> Product ID: </label>
+        <input type="text" id="static-product-id" name="static-product-id" value="[ID from selected row]" readonly>
+
+        <br>
+        <br>
+
+        <input type="checkbox" id="stock-qty" name="stock-qty" value="edit_stock">
+        <label for="stock-qty"> Edit Stock Quantity </label>
         <input type="text" id="new-stock" name="new-stock" value="Update Quantity">
 
+        <br>
         <br>
 
         <input type="checkbox" id="reorder_qty" name="reorder_qty" value="edit_stock">
@@ -117,14 +125,13 @@
         <input type="text" id="new-stock" name="new-stock" value="Update Quantity">
         
         <br>
-
+        <br>
         <input type="radio" id="set-continued" name="set-continued" value="set_continued">
-        <label for="set_continued"> Discontinue Product </label>
+        <label for="set_continued"> Discontinue Product? </label>
         
         <br>
-
-        <
-
+        <br>
+        <input type="submit" value="Submit">
       </form> 
 
     </main>
