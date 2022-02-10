@@ -1,3 +1,21 @@
 li {
 	display: inline;
 }
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border:1px solid #FF0000;
+  }
+
+table td {
+	border:1px solid #FF0000;
+	text-align: center;
+}
+
+div {
+	display: flex;
+	justify-content: space-between;
+}
+	

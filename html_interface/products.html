@@ -40,9 +40,70 @@
 
     <main>
       <h2> Products </h2>
+
+      <h3> Select Product By... <h3>
+      <form> 
+        
+        <input type="radio", id="search-by-id", name="select-product" value="id">
+        <label for="search-by-id"> ID </label> 
+        
+        <br>
+        
+        <input type="radio", id="search-by-name", name="select-product" value="name">
+        <label for="search-by-name"> Product Name </label>
+
+        <br>
+        <br>
+
+        <input type="text" id="search-input" name="search-input" value="">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+
+      </form>
+      
+      <br>
+
+      <table style="width: 100%; height: 175px; overflow: auto;">
+
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Color</th>
+          <th>Cubic Inches</th>
+          <th>Pounds</th>
+          <th>Price</th>
+          <th>In Stock</th>
+          <th>Reorder Quantity</th>
+          <th>Discontinued</th>
+        </tr>
+
+        <tr>
+          <td>1</td>
+          <td>example cookbook #1</td>
+          <td>red</td>
+          <td>100</td>
+          <td>1</td>
+          <td>$19.99</td>
+          <td>25</td>
+          <td>5</td>
+          <td>False</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>example cookbook #2</td>
+          <td>blue</td>
+          <td>100</td>
+          <td>2</td>
+          <td>$29.99</td>
+          <td>4</td>
+          <td>5</td>
+          <td>False</td>
+        </tr>
+
+      </table>
     </main>
-
   </body>
-
 
 </html>
