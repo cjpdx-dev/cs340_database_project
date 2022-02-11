@@ -42,7 +42,22 @@
 
     <form>
       <h3>Create an Address:</h3>
-      <input type="text" required="customer_id" id="address" name="address" />
+      <label for="address1">Address 1:</label><br />
+      <input
+        type="text"
+        required="customer_id"
+        id="address"
+        name="address"
+      /><br />
+      <label for="address2">Address 2:</label><br />
+      <input type="text" id="address" name="address" /><br />
+      <label for="address_city">City:</label><br />
+      <input type="text" id="address_city" name="address_city" /><br />
+      <label for="address_state">State:</label><br />
+      <input type="text" id="address_state" name="address_state" /><br />
+      <label for="address_zip">Zip Code:</label><br />
+      <input type="text" id="address_zip" name="address_zip" /><br /><br />
+
       <input type="submit" value="Submit" /> <br /><br />
     </form>
 
