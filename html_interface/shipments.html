@@ -40,9 +40,116 @@
 
     <main>
       <h2> Shipments </h2>
+
+        <h3> Select Shipment By ID </h3> 
+
+        <div class="select-forms" style="display: inline;">
+
+          <form style="border: 2px solid black; width: 35%; padding: 5px;">
+            <label for="shipment-by-id"> Shipment ID </label>
+            <br>
+            <input type="text" id="shipment-by-id" name="shipment-by-id">              
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+          </form>
+
+          <br>
+          <h3> Select Shipment By Customer/Order/Address </h3>
+          <form  style="border: 2px solid black; width: 35%; padding: 5px;">
+
+            <label for="shipment-by-cust-id"> Customer ID </label>
+            <br>
+            <input type="text" id="shipment-by-cust-id" name="shipment-by-cust-id">
+            <br>
+
+            <label for="shipment-by-order-id"> Order ID </label>
+            <br>
+            <input type="text" id="shipment-by-order-id" name="shipment-by-order-id">
+            <br>
+
+            <label for="shipment-by-address-id"> Address ID </label>
+            <br>
+            <input type="text" id="shipment-by-address-id" name="shipment-by-address-id">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+          </form>
+
+        </div>
+
+        <div class="results-table" style="display: inline; padding: 10px;">
+        
+          <table> 
+            <tr>
+              <th> Shipment ID</th>
+              <th> Customer ID </th>
+              <th> Street </th>
+              <th> City  </th>
+              <th> State </th>
+              <th> Zip Code </th>
+              <th style="border:0;"></th>
+            </tr>
+            
+            <tr>
+              <td> x </td>
+              <td> y </td>
+              <td> z </td>
+              <td> 1 </td>
+              <td> 2 </td>
+              <td> 3 </td>
+              <td> <button type="button"> Edit </button> </td>
+
+            </tr> 
+
+            <tr>
+              <td> x </td>
+              <td> y </td>
+              <td> z </td>
+              <td> 1 </td>
+              <td> 2 </td>
+              <td> 3 </td>
+              <td> <button type="button"> Edit </button> </td>
+            </tr> 
+
+          </table>
+        
+        </div>
+
+        <h3> Update Shipment </h3>
+        <h4> (Select a row in the above table first) </h4>
+        
+        <form>
+  
+          <label for="static-product-id"> Shipment ID: </label>
+          <input type="text" id="static-product-id" name="static-product-id" value="[ID from selected row]" readonly>
+  
+          <br>
+          <br>
+  
+          <input type="checkbox" id="stock-qty" name="stock-qty" value="edit_stock">
+          <label for="stock-qty"> Edit Stock Quantity </label>
+          <input type="text" id="new-stock" name="new-stock" value="Update Quantity">
+  
+          <br>
+          <br>
+  
+          <input type="checkbox" id="reorder_qty" name="reorder_qty" value="edit_stock">
+          <label for="reorder_qty"> Edit Reorder Quantity </label>
+          <input type="text" id="new-stock" name="new-stock" value="Update Quantity">
+          
+          <br>
+          <br>
+          <input type="radio" id="set-continued" name="set-continued" value="set_continued">
+          <label for="set_continued"> Delete Shipment? </label>
+          
+          <br>
+          <br>
+          <input type="submit" value="Submit">
+        </form> 
+
     </main>
 
   </body>
-
 
 </html>
