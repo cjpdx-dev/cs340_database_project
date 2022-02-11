@@ -39,13 +39,21 @@
     </nav>
 
     <main>
-      <h2> Shipments </h2>
+      <h2 style="text-align: center;"> Shipments </h2>
+
+        <h3> Create Shipment </h3>
+        <form style="border: 2px solid black; width: fit-content; margin: 1%; padding: 5%;">
+          
+          <label for="new-shipment-order-id">Order ID</label>
+          <input type="text" id="new-shipment-order-id" name="new-shipment-order-id">
+
+          <p> [Display a list of all order products that are not assigned to a shipment
+              Each row has check box selectors, checking the row adds the product to the shipment.]
+          </p>
+        </form>
 
         <h3> Select Shipment By ID </h3> 
-
-        <div class="select-forms" style="display: inline;">
-
-          <form style="border: 2px solid black; width: 35%; padding: 5px;">
+          <form style="border: 2px solid black; width: fit-content; margin: 1%; padding: 5%;">
             <label for="shipment-by-id"> Shipment ID </label>
             <br>
             <input type="text" id="shipment-by-id" name="shipment-by-id">              
@@ -54,10 +62,9 @@
             <input type="submit" value="Submit">
           </form>
 
-          <br>
           <h3> Select Shipment By Customer/Order/Address </h3>
-          <form  style="border: 2px solid black; width: 35%; padding: 5px;">
-
+          
+          <form style="border: 2px solid black; width: fit-content; margin: 1%; padding: 5%;">
             <label for="shipment-by-cust-id"> Customer ID </label>
             <br>
             <input type="text" id="shipment-by-cust-id" name="shipment-by-cust-id">
@@ -76,10 +83,7 @@
             <input type="submit" value="Submit">
           </form>
 
-        </div>
-
         <div class="results-table" style="display: inline; padding: 10px;">
-        
           <table> 
             <tr>
               <th> Shipment ID</th>
@@ -113,37 +117,53 @@
             </tr> 
 
           </table>
-        
         </div>
 
         <h3> Update Shipment </h3>
         <h4> (Select a row in the above table first) </h4>
         
+        <form style="border: 2px solid black; width: fit-content; margin: 1%; padding: 5%;">
+  
+          <label for="static-address-id"> Shipment ID: </label>
+          <input type="text" id="static-address-id" name="static-address-id" value="[ID from selected row]" readonly>
+  
+          <br>
+          <br>
+  
+          <input type="checkbox" id="edit-address-1" name="edit-address-1" value="edit_address_1"> 
+          <label for="edit-address-1"> Edit Address 1 </label> <br>
+          <input type="text" id="new-address-1" name="new-address-1" value="">
+  
+          <br>
+          <br>
+  
+          <input type="checkbox" id="edit-address-2" name="edit-address-2" value="edit_address_1">
+          <label for="edit-address-2"> Edit Address 2 </label> <br>
+          <input type="text" id="new-address-2" name="new-address-2" value="">
+
+          <br>
+          <br>
+  
+          <input type="checkbox" id="edit-city" name="edit-city" value="edit_city"> 
+          <label for="edit-city"> Edit City </label> <br>
+          <input type="text" id="new-city" name="new-city" value="">
+
+          <br>
+          <br>
+  
+          <input type="checkbox" id="edit-state" name="edit-state" value="edit_state">
+          <label for="edit-city"> Edit State </label>  <br>
+          <input type="text" id="new-state" name="new-state" value="">
+          <br>
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+
+        <br>
+
         <form>
-  
-          <label for="static-product-id"> Shipment ID: </label>
-          <input type="text" id="static-product-id" name="static-product-id" value="[ID from selected row]" readonly>
-  
-          <br>
-          <br>
-  
-          <input type="checkbox" id="stock-qty" name="stock-qty" value="edit_stock">
-          <label for="stock-qty"> Edit Stock Quantity </label>
-          <input type="text" id="new-stock" name="new-stock" value="Update Quantity">
-  
-          <br>
-          <br>
-  
-          <input type="checkbox" id="reorder_qty" name="reorder_qty" value="edit_stock">
-          <label for="reorder_qty"> Edit Reorder Quantity </label>
-          <input type="text" id="new-stock" name="new-stock" value="Update Quantity">
-          
-          <br>
-          <br>
-          <input type="radio" id="set-continued" name="set-continued" value="set_continued">
-          <label for="set_continued"> Delete Shipment? </label>
-          
-          <br>
+          <input type="checkbox" id="delete-shipment" name="delete-shipment" value="delete-shipment">
+          <label for="delete-shipment"> Delete Shipment? </label>
           <br>
           <input type="submit" value="Submit">
         </form> 

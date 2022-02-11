@@ -39,7 +39,81 @@
     </nav>
 
     <main>
-      <h2> Orders </h2>
+      <h2 style="text-align: center;"> Orders </h2>
+
+      <h3> Create Order </h3>
+        <form style="border: 2px black solid; width: fit-content; padding: 5px; margin: 5px;">
+          <label for="new-order-cust-id"> Customer ID </label>
+          <br>
+          <input type="text" id="new-order-cust-id" name="new-order-cust-id">
+          <br>
+          <br>
+          <select type="select" id="new-order-pay-method-id" name="new-order-pay-method-id">
+            <option value="default">-- Select Pay Method --</option>
+            <option value="card1">Card ending in 3812 - Exp. 04/22</option>
+            <option value="card2">Card ending in 8176 - Exp. 05/23</option>
+          </select>
+          <br>
+          <br>
+          <select type="select" id="new-order-address-id" name="new-order-address-id">
+            <option value="defaut">-- Select Address --</option>
+            <option value="address1">5178 NW Eastmore Dr. Portland OR 97128 </option>
+            <option value="address2">6137 SE Morland Ave. Beaverton OR 97005 </option>
+          </select>
+
+          <p> 
+            [List of all active products that are in stock. Each product
+            would have a quantity field.]
+          </p>
+
+          <input type="submit" value="Submit">
+        </form>
+
+      <h3> Find Order By ID</h3>
+        <form style="border: 2px black solid; width: fit-content; padding: 5px; margin: 5px;">
+          <label for="display-order-cust-id">Order ID</label>
+          <br>
+          <input type="text" id="display-order-cust-id" name="display-order-cust-id">
+          <br>
+          <br>
+          <input type="submit" value="Submit">
+
+          <br>
+          <br>
+        </form>
+
+      <h3> Find Order(s) By Customer ID/Status </h3>
+        <form style="border: 2px black solid; width: fit-content; padding: 5px; margin: 5px;">
+          <input type="radio" id="all-orders" name="all-orders" value="all_orders">
+          <lable for="all-orders"> All </lable>
+          <br>
+          <input type="radio" id="open-orders" name="open-orders" value="open_orders">
+          <lable for="open-orders">Open Orders </lable>
+          <br>
+          <input type="radio" id="active-orders" name="active-orders" value="active_orders">
+          <lable for="active-orders">Active Orders </lable>
+          <br>
+          <input type="radio" id="processed-orders" name="processed-orders" value="processed_orders">
+          <lable for="processed-orders">Processed Orders </lable>
+          <br>
+          <input type="radio" id="packaged-orders" name="packaged-orders" value="packaged_orders">
+          <lable for="packaged-orders">Packaged Orders </lable>
+          <br>
+          <input type="radio" id="closed-orders" name="closed-orders">
+          <label for="closed-orders"> Closed Orders </label>
+      </form>
+
+        <p> [Single order or list of orders based on search results] </p>
+
+      <h3> Edit Order </h3>
+        <form style="border: 2px black solid; width: fit-content; padding: 5px; margin: 5px;">
+          <h4> Set Order Status </h4> 
+          
+        </form>
+
+      <p> *Note* </p>
+      <p> Orders don't get deleted (though they may eventually be purged), they are either open or closed.</p>
+
     </main>
 
   </body>

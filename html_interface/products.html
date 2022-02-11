@@ -39,10 +39,55 @@
     </nav>
 
     <main>
-      <h2> Products </h2>
+      <h2 style="text-align:center;"> Products </h2>
+      <h3> Create New Product </h3>
+      <form style="border: 2px solid black; width:fit-content; padding: 5%; margin: 1%;">
+        
+        
+        <label for="new-product-name"> Name: </label>
+        <br>
+        <input type="text" id="new-product-name" name="new-product-name">
+        <br>
 
-      <h3> Select Product By... <h3>
-      <form> 
+        <label for="new-product-color"> Color: </label>
+        <br>
+        <input type="text" id="new-product-color" name="new-product-color">
+        <br>
+
+        <label for="new-product-volume"> Cubic Inches: </label>
+        <br>
+        <input type="text" id="new-product-volume" name="new-product-volume">
+        <br>
+
+        <label for="new-product-lbs"> Weight (lbs): </label>
+        <br>
+        <input type="text" id="new-product-lbs" name="new-product-lbs">
+        <br>
+
+        <label for="new-product-price"> Price: </label>
+        <br>
+        <input type="text" id="new-product-price" name="new-product-price">
+        <br>
+
+        <label for="new-product-stock-qty"> Stock Quantity: </label>
+        <br>
+        <input type="text" id="new-product-stock-qty" name="new-product-stock-qty">
+        <br>
+
+        <label for="new-reorder-qty"> Reorder Quantity: </label>
+        <br>
+        <input type="text" id="new-product-reorder-qty" name="new-product-reorder-qty">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+
+      <br>
+
+      <h3> Search Products </h3>
+      <form style="border: 2px solid black; width: fit-content; padding: 5%; margin: 1%;"> 
+
+        <h4> Select Product By... <h4>
         
         <input type="radio", id="search-by-id", name="select-product" value="id">
         <label for="search-by-id"> ID </label> 
@@ -59,7 +104,7 @@
       
       <br>
 
-      <table style="width: 100%; height: 175px; overflow: auto;">
+      <table style="width: 100%; height: 175px; overflow: auto; padding: 5%; margin: 1%">
 
         <tr>
           <th>ID</th>
@@ -100,13 +145,13 @@
           <td><button type="button"> Edit </button></td>
         </tr> 
       </table>
-
-
-      <h3> Update Product Stock </h3>
-      <h4> (Select a row in the above table first) </h4>
       
-      <form>
+      <br> 
 
+      <h3> Update Product </h3>
+      <form style="border: 2px solid black; width: fit-content; padding: 5%; margin: 1%;">
+
+        <h4> (Select a row in the above table first) </h4>
         <label for="static-product-id"> Product ID: </label>
         <input type="text" id="static-product-id" name="static-product-id" value="[ID from selected row]" readonly>
 
@@ -126,8 +171,8 @@
         
         <br>
         <br>
-        <input type="radio" id="set-continued" name="set-continued" value="set_continued">
-        <label for="set_continued"> Discontinue Product? </label>
+        <input type="radio" id="set-discontinued" name="set-discontinued" value="set_discontinued">
+        <label for="set_discontinued"> Discontinue Product? </label>
         
         <br>
         <br>
