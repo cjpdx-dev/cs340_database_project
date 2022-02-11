@@ -41,7 +41,37 @@
     </main>
 
     <form>
-      <input type="text" id="email" name="email" />
+      <h3>Create an Address:</h3>
+      <input type="text" required="customer_id" id="address" name="address" />
+      <input type="submit" value="Submit" /> <br /><br />
+    </form>
+
+    <form>
+      <h3>Search for Address:</h3>
+      <input type="text" id="search_address" name="search_address" />
+      <input type="submit" value="Search" /> <br /><br />
+    </form>
+
+    <form>
+      <h3>Update Address:</h3>
+      <input
+        type="text"
+        required="address_id"
+        id="update_address"
+        name="update_address"
+      />
+      <input type="submit" value="Update Address" /> <br /><br />
+    </form>
+
+    <form>
+      <h3>Delete Address:</h3>
+      <input
+        type="text"
+        required="address_id"
+        id="delete_address"
+        name="delete_address"
+      />
+      <input type="submit" value="Delete Address" />
     </form>
   </body>
 </html>
