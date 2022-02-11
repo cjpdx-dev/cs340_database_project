@@ -1,48 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Addresses</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
-  
+
   <body>
     <script src="addresses.js"></script>
 
-    <h1> CookNooks: Database Interface </h1>
+    <h1>CookNooks: Database Interface</h1>
 
     <nav>
       <ul>
-        <li> <a href="index.html"> Home Page </a> </li>
+        <li><a href="index.html"> Home Page </a></li>
         |
-        <li> <a href="customers.html">Customers</a> </li>
+        <li><a href="customers.html">Customers</a></li>
         |
         <li> <a href="emails.html"> Emails </a> </li>
         |
-        <li> <a href="addresses.html">Addresses</a> </li>
+        <li><a href="addresses.html">Addresses</a></li>
         |
-        <li> <a href="orders.html"> Orders </a> </li>
+        <li><a href="orders.html"> Orders </a></li>
         |
-        <li> <a href="shipments.html"> Shipments </a> </li>
+        <li><a href="shipments.html"> Shipments </a></li>
         |
-        <li> <a href="products.html"> Products </a> </li>
+        <li><a href="products.html"> Products </a></li>
         |
-        <li> <a href="product-prices.html"> Product Prices </a> </li>
+        <li><a href="product-prices.html"> Product Prices </a></li>
         |
-        <li> <a href="transactions.html"> Transactions </a> </li>
+        <li><a href="transactions.html"> Transactions </a></li>
         |
-        <li> <a href="pay-methods.html"> Pay Methods </a> </li>
-  
+        <li><a href="pay-methods.html"> Pay Methods </a></li>
       </ul>
     </nav>
 
     <main>
-      <h2> Addresses </h2>
+      <h2>Addresses</h2>
     </main>
 
+    <form>
+      <h3>Create an Address:</h3>
+      <label for="address1">Address 1:</label><br />
+      <input
+        type="text"
+        required="customer_id"
+        id="address"
+        name="address"
+      /><br />
+      <label for="address2">Address 2:</label><br />
+      <input type="text" id="address" name="address" /><br />
+      <label for="address_city">City:</label><br />
+      <input type="text" id="address_city" name="address_city" /><br />
+      <label for="address_state">State:</label><br />
+      <input type="text" id="address_state" name="address_state" /><br />
+      <label for="address_zip">Zip Code:</label><br />
+      <input type="text" id="address_zip" name="address_zip" /><br /><br />
+
+      <input type="submit" value="Submit" /> <br /><br />
+    </form>
+
+    <form>
+      <h3>Search for Address:</h3>
+      <input type="text" id="search_address" name="search_address" />
+      <input type="submit" value="Search" /> <br /><br />
+    </form>
+
+    <form>
+      <h3>Update Address:</h3>
+      <input
+        type="text"
+        required="address_id"
+        id="update_address"
+        name="update_address"
+      />
+      <input type="submit" value="Update Address" /> <br /><br />
+    </form>
+
+    <form>
+      <h3>Delete Address:</h3>
+      <input
+        type="text"
+        required="address_id"
+        id="delete_address"
+        name="delete_address"
+      />
+      <input type="submit" value="Delete Address" />
+    </form>
   </body>
-
-
 </html>
