@@ -72,34 +72,80 @@
       <h3> Search Orders </h3>
       <div style="border: 2px black solid; padding: 5px; margin: 5px;">
 
-        <form  style="width: fit-content; padding: 5px; margin: 5px;">
+        <form style="padding: 5px; margin: 5px;">
           <h4> Find Order By Order ID </h4>
           <label for="display-order-cust-id">Order ID</label>
           <br>
           <input type="text" id="display-order-cust-id" name="display-order-cust-id">
           <br>
           <br>
-          <input type="submit" value="Submit">
-
           <br>
+          <input type="submit" value="Submit">
           <br>
         </form>
 
         <br>
 
+
         <form style="padding: 5px; margin: 5px;">
-          
-      </form>
+          <h4> Find Order By Status/CustomerID </h4>
+          <label for="search-by-status"> Order Status </label>
+          <br>
+          <select type="select" id="search-by-status" name="search-by-status">
+            <option value="defaut">All</option>
+            <option value="open">Open</option>
+            <option value="active">Active</option>
+            <option value="processed">Processed</option>
+            <option value="packaged">Packaged</option>
+            <option value="closed">Closed</option>
+          </select>
+         
+          <input type="checkbox" id="search-with-customer-id" name="search-with-customer-id" value="search-with-customer-id">
+          <input type="text" id="customer-id" name="customer-id" value="Customer ID">
+
+          <br>
+          <br>
+          <br>
+          <input type="submit" value="Submit">
+        </form>
 
       </div>
 
-      <p> [Single order or list of orders based on search results] </p>
+      <h3> Set Order Status </h3>
+      <form style="border: 2px black solid; width: fit-content; padding: 5px; margin: 5px;">
 
-      <h3> Edit Order </h3>
-        <form style="border: 2px black solid; width: fit-content; padding: 5px; margin: 5px;">
-          <h4> Set Order Status </h4> 
+        <table>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer ID</th>
+            <th>Transaction ID</th>
+            <th>Datetime Created</th>
+            <th>Order Status</th>
+            <th style="border:0;"></th>
+          </tr>
+          <tr> 
+            <td> 1 </td>
+            <td> 2 </td> 
+            <td> 56461 </td>
+            <td> 2021/12/12 12:13:59 </td>
+            <td> Open </td>
+            
+            <td> 
+              <select type="select" id="set-order-status" name="set-order-status">
+                <option value="defaut">Set Status</option>
+                <option value="open">Open</option>
+                <option value="active">Active</option>
+                <option value="processed">Processed</option>
+                <option value="packaged">Packaged</option>
+                <option value="closed">Closed</option>
+              </select>
+            </td>
           
-        </form>
+          </tr>
+        </table>
+        <input type="submit" value="Submit">
+        
+      </form>
 
       <p> *Note* </p>
       <p> Orders don't get deleted (though they may eventually be purged), they are either open or closed.</p>
