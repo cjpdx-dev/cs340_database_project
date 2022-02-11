@@ -39,7 +39,55 @@
     </nav>
 
     <main>
-      <h2> Transactions </h2>
+      <h2 style="text-align: center;"> Transactions </h2>
+
+      <h3> View Transaction(s)</h3>
+
+        <form style="border: 2px black solid; width: fit-content; margin: 2%; padding:1%">
+          <h4>By Transaction ID</h4>
+          <label for="search-transaction-id">Transaction ID </label>
+          <br>
+          <input type="text" id="search-transaction-id" name="search-transaction-id">
+          <br>
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+
+        <form style="border: 2px black solid; width: fit-content; margin: 2%; padding:1%">
+          <h4> By Order ID </h4>
+          <label for="search-transaction-order-id">Order ID </label>
+          <br>
+          <input type="text" id="search-transaction-order-id" name="search-transaction-order-id">
+          <br>
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+
+        <form style="border: 2px black solid; width: fit-content; margin: 2%; padding:1%">
+          <h4> By Customer ID </h4>
+          <label for="search-transaction-cust-id">Customer ID </label>
+          <br>
+          <input type="text" id="search-transaction-cust-id" name="search-transaction-cust-id">
+          <br>
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+
+        <form style="border: 2px black solid; width: fit-content; margin: 2%; padding:1%">
+          <h4> By Payment ID</h4>
+          <label for="search-transaction-pay-id"> Pay ID </label>
+          <br>
+          <input type="text" id="search-transaction-pay-id" name="search-transaction-pay-id">
+          <br>
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+
+        <p> Display Transaction Data Here </p>
+
+        <p> Note: Transactions can't be modified or deleted. They also can't be created
+          manually, they only occur when an order is successfully processed.
+        </p>
     </main>
 
   </body>
