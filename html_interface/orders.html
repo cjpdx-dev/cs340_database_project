@@ -69,8 +69,11 @@
           <input type="submit" value="Submit">
         </form>
 
-      <h3> Find Order By ID</h3>
-        <form style="border: 2px black solid; width: fit-content; padding: 5px; margin: 5px;">
+      <h3> Search Orders </h3>
+      <div style="border: 2px black solid; padding: 5px; margin: 5px;">
+
+        <form  style="width: fit-content; padding: 5px; margin: 5px;">
+          <h4> Find Order By Order ID </h4>
           <label for="display-order-cust-id">Order ID</label>
           <br>
           <input type="text" id="display-order-cust-id" name="display-order-cust-id">
@@ -82,28 +85,15 @@
           <br>
         </form>
 
-      <h3> Find Order(s) By Customer ID/Status </h3>
-        <form style="border: 2px black solid; width: fit-content; padding: 5px; margin: 5px;">
-          <input type="radio" id="all-orders" name="all-orders" value="all_orders">
-          <lable for="all-orders"> All </lable>
-          <br>
-          <input type="radio" id="open-orders" name="open-orders" value="open_orders">
-          <lable for="open-orders">Open Orders </lable>
-          <br>
-          <input type="radio" id="active-orders" name="active-orders" value="active_orders">
-          <lable for="active-orders">Active Orders </lable>
-          <br>
-          <input type="radio" id="processed-orders" name="processed-orders" value="processed_orders">
-          <lable for="processed-orders">Processed Orders </lable>
-          <br>
-          <input type="radio" id="packaged-orders" name="packaged-orders" value="packaged_orders">
-          <lable for="packaged-orders">Packaged Orders </lable>
-          <br>
-          <input type="radio" id="closed-orders" name="closed-orders">
-          <label for="closed-orders"> Closed Orders </label>
+        <br>
+
+        <form style="padding: 5px; margin: 5px;">
+          
       </form>
 
-        <p> [Single order or list of orders based on search results] </p>
+      </div>
+
+      <p> [Single order or list of orders based on search results] </p>
 
       <h3> Edit Order </h3>
         <form style="border: 2px black solid; width: fit-content; padding: 5px; margin: 5px;">
