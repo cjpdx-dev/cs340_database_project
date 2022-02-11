@@ -41,6 +41,7 @@
     </main>
 
     <form>
+      <h3>Create New Customer:</h3>
       <label for="customer_id">Customer ID:</label><br />
       <input type="text" id="customer_id" name="customer_id" /><br />
       <label for="fname">First Name:</label><br />
@@ -50,8 +51,25 @@
       <label for="dob">Date of Birth:</label><br />
       <input type="text" id="dob" name="dob" /> <br />
       <label for="email">Email:</label><br />
-      <input type="text" id="email" name="email" /><br /><br />
-      <input type="submit" value="Submit" />
+      <input type="text" id="email" name="email" />
+      <button type="button">Edit Email</button><br /><br />
+      <input type="submit" value="Submit" /><br /><br />
     </form>
+
+    <form>
+      <h3>Customer Search:</h3>
+      <label for="search_customer">Search for Customer by ID:</label>
+      <input type="text" id="search_customer" name="search_customer" />
+      <button type="button">Search</button> <br /><br />
+      <label for="search_customer">Search for Customer by First Name:</label>
+      <input type="text" id="search_customer" name="search_customer" />
+      <button type="button">Search</button> <br /><br />
+      <label for="search_customer">Search for Customer by Last Name:</label>
+      <input type="text" id="search_customer" name="search_customer" />
+      <button type="button">Search</button> <br /><br />
+    </form>
+
+    <h3>Want to delete your account?</h3>
+    <button type="button">Delete Account</button>
   </body>
 </html>
