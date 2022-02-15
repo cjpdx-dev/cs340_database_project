@@ -23,7 +23,11 @@
         |
         <li> <a href="orders.html"> Orders </a> </li>
         |
+        <li> <a href="order-items.html"> Order Items </a></li>
+        |
         <li> <a href="shipments.html"> Shipments </a> </li>
+        |
+        <li> <a href="shipment-items.html"> ShipmentsItems </a> </li>
         |
         <li> <a href="products.html"> Products </a> </li>
         |
@@ -42,47 +46,47 @@
       <h3> Create Order </h3>
 
         <div class="order-create-wrapper">
-        <form>
-          <label for="new-order-cust-id"> Customer ID </label>
+          <form class="order-create-form">
+
+            <label for="new-order-cust-id"> Customer ID </label>
+            <input type="text" id="new-order-cust-id" name="new-order-cust-id">
+            
+            <select type="select" id="new-order-pay-method-id" name="new-order-pay-method-id">
+              <option value="default">-- Select Pay Method --</option>
+              <option value="card1">Card ending in 3812 - Exp. 04/22</option>
+              <option value="card2">Card ending in 8176 - Exp. 05/23</option>
+            </select>
+
+            <select type="select" id="new-order-address-id" name="new-order-address-id">
+              <option value="defaut">-- Select Address --</option>
+              <option value="address1">5178 NW Eastmore Dr. Portland OR 97128 </option>
+              <option value="address2">6137 SE Morland Ave. Beaverton OR 97005 </option>
+            </select>
+
+          <br>
+          <br>
           
-          <input type="text" id="new-order-cust-id" name="new-order-cust-id">
-          
-          <select type="select" id="new-order-pay-method-id" name="new-order-pay-method-id">
-            <option value="default">-- Select Pay Method --</option>
-            <option value="card1">Card ending in 3812 - Exp. 04/22</option>
-            <option value="card2">Card ending in 8176 - Exp. 05/23</option>
-          </select>
-
-          <select type="select" id="new-order-address-id" name="new-order-address-id">
-            <option value="defaut">-- Select Address --</option>
-            <option value="address1">5178 NW Eastmore Dr. Portland OR 97128 </option>
-            <option value="address2">6137 SE Morland Ave. Beaverton OR 97005 </option>
-          </select>
-
-          <p> 
-            [List of all active products that are in stock. Each product
-            would have a quantity field.]
-          </p>
-
-          <input type="submit" value="Submit">
+          <input type="submit" value="Create Order">
         </form>
       </div>
 
       <h3> Search Orders </h3>
 
-        <div class="order-search-wrapper">
-        <h4> Find Order By Order ID </h4>
-        <form>
-          <label for="display-order-cust-id">Order ID</label>
-          <input type="text" id="display-order-cust-id" name="display-order-cust-id">
+      <div class="order-search-wrapper">
+        
+        <h4> Search By Order ID </h4>
+
+        <form class="order-search-by-id-form">
+          <input type="text" id="display-order-cust-id" name="display-order-cust-id" value="Order ID">
+          <br>
+          <br>
           <input type="submit" value="Submit">
         </form>
 
-        <h4> Find Order By Status/CustomerID </h4>
+        <h4> Search By Status/CustomerID </h4>
         
-        <form>
-          <label for="search-by-status"> Order Status </label>
-          
+        <form class="order-search-by-status-form">
+          <label for="search-by-status"> Search By: </label>
           <select type="select" id="search-by-status" name="search-by-status">
             <option value="defaut">All</option>
             <option value="open">Open</option>
@@ -91,51 +95,72 @@
             <option value="packaged">Packaged</option>
             <option value="closed">Closed</option>
           </select>
-        
-          <input type="checkbox" id="search-with-customer-id" name="search-with-customer-id" value="search-with-customer-id">
-          <input type="text" id="customer-id" name="customer-id" value="Customer ID">
+
+          <input type="checkbox" id="allow-search-by-cust-id" name="allow-search-by-cust-id">
+          <input type="text" id="customer-id" name="customer-id" value="Customer ID" disabled>
+
+          <div class="order-search-sort-options">
+            <h5> Group By </h5>
+
+            <input type="checkbox" id="order-by-date" name="order-by-date" value="order_by_date">
+            <label for="order-by-date">Most Recent</label>
+
+            <input type="checkbox" id="order-by-customer-id" name="order-by-customer-id" value="order_by_customer_id">
+            <label for="order-by-customer-id">Item Count</label>
+          </div>
+
           <input type="submit" value="Submit">
         </form>
 
-      <h4> Search Results </h4>
+        <h4> Search Results </h4>
 
         <table class="order-query-output-table">
 
-          <tr>
-            <th>Order ID</th>
-            <th>Customer ID</th>
-            <th>Transaction ID</th>
-            <th>Datetime Created</th>
-            <th>Order Status</th>
-            <th style="border:0;"></th>
-          </tr>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer ID</th>
+              <th>Customer Name</th>
+              <th>Transaction ID</th>
+              <th>Datetime Created</th>
+              <th style="border:0;"></th>
+              <th style="border:0;"></th>
+              <th style="border:0;"></th>
+            </tr>
+          </thead>
 
-          <tr> 
-            <td> 1 </td>
-            <td> 2 </td> 
-            <td> 56461 </td>
-            <td> 2021/12/12 12:13:59 </td>
-            <td> Open </td>
-            <td> 
-              <button class="order-edit-button">Edit</button>
-            </td>
-          </tr>
-        
+          <tbody>
+            <tr> 
+              <td> 1 </td>
+              <td> 2 </td>
+              <td> Chris Jacobs </td> 
+              <td> 56461 </td>
+              <td> 2021/12/12 12:13:59 </td>
+
+              <td> 
+                <form class="order-edit-status-form">
+                  <select type="select" id="set-order-status" name="set-order-status">
+                    <option value="set-status" selected>Set Status</option>
+                    <option value="open">Open</option>
+                    <option value="active">Active</option>
+                    <option value="processed">Processed</option>
+                    <option value="packaged">Packaged</option>
+                    <option value="closed">Closed</option>
+                  </select>
+              </td>
+
+              <td> 
+                <button class="order-edit-items-button" id="order-edit-items-button">Edit</button>
+              </td>
+
+              <td>
+                <button class="order-delete-order-button" id="order-delete-order-button">Delete</button>
+              </td>
+            </tr>
+          </tbody>
         </table>
-      </div>
 
-      <form class="order-edit-form">
-        <select type="select" id="set-order-status" name="set-order-status">
-          <option value="defaut">Set Status</option>
-          <option value="open">Open</option>
-          <option value="active">Active</option>
-          <option value="processed">Processed</option>
-          <option value="packaged">Packaged</option>
-          <option value="closed">Closed</option>
-        </select>
-        
-        <input type="submit" value="Submit">
-      </form>
+      </div>
 
     </main>
 

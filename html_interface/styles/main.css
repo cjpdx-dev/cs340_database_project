@@ -1,32 +1,65 @@
 h1 {
 	text-align: center;
+	margin: 1%;
 }
 
 h2 {
 	text-align: center;
-	margin: 5%;
+	margin: 1%;
 	text-decoration: underline;
+}
+
+h3 {
+	margin: 1%;
+}
+
+h5 {
+	display: inline;
 }
 
 nav {
 	text-align: center;
+	margin: 1%;
 }
 
 li {
 	display: inline;
 }
 
-
-
-
+main {
+	margin: 1%;
+}
 
 /* Orders */
 .order-create-wrapper {
 	border: 2px solid black;
+	margin: 1%;
+	padding: 1%;
+}
+
+.order-create-order-form {
+	display: auto;
 }
 
 .order-search-wrapper {
 	border: 2px solid black;
+	margin: 1%;
+	padding: 1%;
+}
+
+.order-search-by-id-form {
+	border-bottom: 2px solid black;
+	padding-bottom: 1%;
+}
+
+.order-search-by-status-form {
+	border-bottom: 2px solid black;
+	padding-bottom: 1%;
+}
+
+.order-search-sort-options {
+	margin-top: 1%;
+	margin-bottom: 1%;
 }
 
 .order-query-output-table {
@@ -36,6 +69,14 @@ li {
 	border:1px solid black;
 }
 
+.order-query-output-table thead {
+	padding-bottom: 1%;
+}
+
+.order-query-output-table tr {
+	margin-bottom: 1%;
+}
+
 .order-query-output-table td {
 	border:1px solid black;
 	text-align: center;
@@ -43,6 +84,10 @@ li {
 
 .order-edit-button {
 	display: auto;
+}
+
+.order-edit-wrapper {
+	border: 2px solid black;
 }
 
 .order-edit-form {
