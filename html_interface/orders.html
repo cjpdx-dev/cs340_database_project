@@ -37,22 +37,22 @@
     </nav>
 
     <main>
-      <h2 style="text-align: center;"> Orders </h2>
+      <h2> Orders </h2>
 
       <h3> Create Order </h3>
-        <form style="border: 2px black solid; width: fit-content; padding: 5px; margin: 5px;">
+
+        <div class="order-create-wrapper">
+        <form>
           <label for="new-order-cust-id"> Customer ID </label>
-          <br>
+          
           <input type="text" id="new-order-cust-id" name="new-order-cust-id">
-          <br>
-          <br>
+          
           <select type="select" id="new-order-pay-method-id" name="new-order-pay-method-id">
             <option value="default">-- Select Pay Method --</option>
             <option value="card1">Card ending in 3812 - Exp. 04/22</option>
             <option value="card2">Card ending in 8176 - Exp. 05/23</option>
           </select>
-          <br>
-          <br>
+
           <select type="select" id="new-order-address-id" name="new-order-address-id">
             <option value="defaut">-- Select Address --</option>
             <option value="address1">5178 NW Eastmore Dr. Portland OR 97128 </option>
@@ -66,28 +66,23 @@
 
           <input type="submit" value="Submit">
         </form>
+      </div>
 
       <h3> Search Orders </h3>
-      <div style="border: 2px black solid; padding: 5px; margin: 5px;">
 
-        <form style="padding: 5px; margin: 5px;">
-          <h4> Find Order By Order ID </h4>
+        <div class="order-search-wrapper">
+        <h4> Find Order By Order ID </h4>
+        <form>
           <label for="display-order-cust-id">Order ID</label>
-          <br>
           <input type="text" id="display-order-cust-id" name="display-order-cust-id">
-          <br>
-          <br>
-          <br>
           <input type="submit" value="Submit">
-          <br>
         </form>
 
-        <br>
-
-        <form style="padding: 5px; margin: 5px;">
-          <h4> Find Order By Status/CustomerID </h4>
+        <h4> Find Order By Status/CustomerID </h4>
+        
+        <form>
           <label for="search-by-status"> Order Status </label>
-          <br>
+          
           <select type="select" id="search-by-status" name="search-by-status">
             <option value="defaut">All</option>
             <option value="open">Open</option>
@@ -96,22 +91,16 @@
             <option value="packaged">Packaged</option>
             <option value="closed">Closed</option>
           </select>
-         
+        
           <input type="checkbox" id="search-with-customer-id" name="search-with-customer-id" value="search-with-customer-id">
           <input type="text" id="customer-id" name="customer-id" value="Customer ID">
-
-          <br>
-          <br>
-          <br>
           <input type="submit" value="Submit">
         </form>
 
-      </div>
+      <h4> Search Results </h4>
 
-      <h3> Set Order Status </h3>
-      <form style="border: 2px black solid; width: fit-content; padding: 5px; margin: 5px;">
+        <table class="order-query-output-table">
 
-        <table>
           <tr>
             <th>Order ID</th>
             <th>Customer ID</th>
@@ -120,36 +109,39 @@
             <th>Order Status</th>
             <th style="border:0;"></th>
           </tr>
+
           <tr> 
             <td> 1 </td>
             <td> 2 </td> 
             <td> 56461 </td>
             <td> 2021/12/12 12:13:59 </td>
             <td> Open </td>
-            
             <td> 
-              <select type="select" id="set-order-status" name="set-order-status">
-                <option value="defaut">Set Status</option>
-                <option value="open">Open</option>
-                <option value="active">Active</option>
-                <option value="processed">Processed</option>
-                <option value="packaged">Packaged</option>
-                <option value="closed">Closed</option>
-              </select>
+              <button class="order-edit-button">Edit</button>
             </td>
-          
           </tr>
-        </table>
-        <input type="submit" value="Submit">
         
-      </form>
+        </table>
+      </div>
 
-      <p> *Note* </p>
-      <p> Orders don't get deleted (though they may eventually be purged), they are either open or closed.</p>
+      <form class="order-edit-form">
+        <select type="select" id="set-order-status" name="set-order-status">
+          <option value="defaut">Set Status</option>
+          <option value="open">Open</option>
+          <option value="active">Active</option>
+          <option value="processed">Processed</option>
+          <option value="packaged">Packaged</option>
+          <option value="closed">Closed</option>
+        </select>
+        
+        <input type="submit" value="Submit">
+      </form>
 
     </main>
 
+    <footer>
+
+    </footer>
+
   </body>
-
-
 </html>

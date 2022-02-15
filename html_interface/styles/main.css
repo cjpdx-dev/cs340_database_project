@@ -1,21 +1,102 @@
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	margin: 5%;
+	text-decoration: underline;
+}
+
+nav {
+	text-align: center;
+}
+
 li {
 	display: inline;
 }
 
-table {
+
+
+
+
+/* Orders */
+.order-create-wrapper {
+	border: 2px solid black;
+}
+
+.order-search-wrapper {
+	border: 2px solid black;
+}
+
+.order-query-output-table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
-	border:1px solid #FF0000;
-  }
+	border:1px solid black;
+}
 
-table td {
-	border:1px solid #FF0000;
+.order-query-output-table td {
+	border:1px solid black;
 	text-align: center;
 }
 
-div {
-	display: flex;
-	justify-content: space-between;
+.order-edit-button {
+	display: auto;
 }
+
+.order-edit-form {
+	display: auto;
+}
+
+/* Product CSS */
+
+.product-create-wrapper {
+	border: 2px solid black;
+	width: 50%;
+}
+
+.product-create-form {
+	margin: 1%;
+	display:grid;
+}
+
+.product-select-wrapper {
+	border: 2px solid black;
+}
+
+.product-select-form {
+	margin: 1%;
+}
+
+.product-query-table {
+	margin: 1%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border:1px solid black;
+}
+
+.product-query-table caption {
+	text-align: left;
+}
+
+.product-query-table td {
+	border:2px solid black;
+	text-align: center;
+}
+
+.product-update-wrapper {
+	border: 2px solid black;
+	width: 50%;
+}
+
+.product-update-form {
+	margin: 1%;
+}
+
+
+
+
+
+
 	
