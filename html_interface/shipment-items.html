@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orders</title>
+    <title>Shipment Items</title>
     <link rel="stylesheet" href="styles/main.css">
   </head>
   
@@ -40,7 +40,80 @@
     </nav>
 
     <main>
-        <h2> ViShipment Items </h2>
+        <h2> Shipment Items </h2> 
+        
+        <h3> View/Edit Shipment Items </h3>
+
+        <div class="shipmentitems-view-items-wrapper">
+          <label for="shipmentitems-id-label">Shipment ID</label>
+          <br>
+          <input type=text id="shipmentitems-id-label" name="shipmentitems-id-label" value="" disabled>
+          <br>
+          <table class="shipmentitems-results-table">
+            <thead>
+              <tr>
+                <th> Item ID</th>
+                <th> Item Name </th>
+                <th> Item Color </th>
+                <th> Qty </th>
+                <th> Weight (lbs) </th>
+                <th> Size (in<sup>3</sup>) </th>
+                <th style="border:0;"></th>
+                <th style="border:0;"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td> 1246 </td>
+                <td> Spatula </td>
+                <td> Silver </td>
+                <td> 2 </td>
+                <td> 0.5 </td>
+                <td> $25.98 </td> 
+                <td> <button class="shipmentitem-edit-button" id="shipmentitem-edit-button">Edit</button></td> 
+                <td> <button class="shipmentitem-delete-button" id="shipmentitem-delete-button">Delete</button></td> 
+              </tr>
+
+              <tr>
+                <td> 1289 </td>
+                <td> Cookbook 1 </td>
+                <td> Red </td>
+                <td> 1 </td>
+                <td> $21.99 </td>
+                <td> $21.99 </td> 
+                <td> <button class="shipmentitem-edit-button" id="shipmentitem-edit-button">Edit</button></td> 
+                <td> <button class="shipmentitem-delete-button" id="shipmentitem-delete-button">Delete</button></td> 
+              </tr>
+
+            </tbody>
+          </table>
+          <tfoot>
+
+            <h4> Shipment Details </h4>
+
+            <div class="shipmentitems-details-wrapper">
+
+              <label for="shipment-item-qty">Item Qty </label>
+              <input style="" type="text" id="shipment-item-qty" name="shipment-item-qty" disabled>
+
+
+
+              <label for="total-shipment-weight">Weight (lbs)</label>
+              <input type="text" id="total-shipment-weight" name="total-shipment-weight" disabled>
+
+
+
+              <label for="total-shipment-volume">Volume (in^3) </label>
+              <input type="text" id="total-shipment-volume" name="total-shipment-volume" disabled>
+            </span>
+
+          </tfoot>
+        </div>
+
+        
+
     </main>
 
     <footer>

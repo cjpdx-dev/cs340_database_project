@@ -126,6 +126,7 @@
             <option value="active">Active</option>
             <option value="processed">Processed</option>
             <option value="packaged">Packaged</option>
+            <option value="shipped">Shipped</option>
             <option value="closed">Closed</option>
           </select>
 
@@ -133,7 +134,7 @@
           <input type="text" id="customer-id" name="customer-id" value="Customer ID" disabled>
 
           <div class="order-search-sort-options">
-            <h5> Group By </h5>
+            <h5> Order By </h5>
 
             <input type="checkbox" id="order-by-date" name="order-by-date" value="order_by_date">
             <label for="order-by-date">Most Recent</label>
@@ -156,9 +157,7 @@
               <th>Customer Name</th>
               <th>Transaction ID</th>
               <th>Datetime Created</th>
-              <th style="border:0;"></th>
-              <th style="border:0;"></th>
-              <th style="border:0;"></th>
+              <th style="border:0;"> Order Options</th>
             </tr>
           <tbody>
             <tr> 
@@ -167,29 +166,30 @@
               <td> Chris Jacobs </td> 
               <td> 56461 </td>
               <td> 2021/12/12 12:13:59 </td>
-              <td> 
+              <td class="order-options" style="border:0;"> 
                 <form class="order-edit-status-form">
-                  <select onchange="this.form.submit()" type="select" id="set-order-status" name="set-order-status">
+                  <select onchange="this.form.submit()" type="select" id="set-order-status" name="set-order-status" class="order-status-selector">
                     <option value="set-status" selected>Set Status</option>
                     <option value="open">Open</option>
                     <option value="active">Active</option>
                     <option value="processed">Processed</option>
                     <option value="packaged">Packaged</option>
+                    <option value="shipped">Shipped</option>
                     <option value="closed">Closed</option>
                   </select>
+
+                <button class="order-edit-items-button" id="order-edit-items-button">Edit Items</button>
+                <button class="order-edit-shipments-button" id="order-edit-shipments-button">Edit Shipments</button>
+
+                <br>
+                <br>
+
+                <button class="order-delete-button" id="order-delete-button">Cancel Order</button>
               </td>
 
-              <td> 
-                <button class="order-edit-items-button" id="order-edit-items-button">Edit</button>
-              </td>
-
-              <td>
-                <button class="order-delete-order-button" id="order-delete-order-button">Delete</button>
-              </td>
             </tr>
           </tbody>
         </table>
-
       </div>
 
     </main>
