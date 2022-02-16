@@ -1,3 +1,12 @@
+/* 
+main.css
+Developed By: Chris Jacobs 
+CS 340 - Winter 2022 
+Oregon State University
+*/
+
+/* All Pages */
+
 h1 {
 	text-align: center;
 	margin: 1%;
@@ -22,13 +31,19 @@ nav {
 	margin: 1%;
 }
 
-li {
+nav li {
 	display: inline;
 }
 
 main {
 	margin: 1%;
 }
+
+/* Home Page */
+
+/* Customers */
+
+/* Addresses */
 
 /* Orders */
 .order-create-wrapper {
@@ -94,7 +109,21 @@ main {
 	display: auto;
 }
 
-/* Product CSS */
+/* Order Items */
+
+.orderitems-view-all-items-wrapper {
+	margin: 1%;
+	padding: 1%;
+	border: 2px solid black;
+}
+
+/* Shipments */
+
+
+/* Shipment Items */
+
+
+/* Products */
 
 .product-create-wrapper {
 	border: 2px solid black;
@@ -139,6 +168,13 @@ main {
 	margin: 1%;
 }
 
+/* Product Prices */
+
+
+/* Transactions */
+
+
+/* Pay Methods */
 
 
 

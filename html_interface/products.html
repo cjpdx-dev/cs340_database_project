@@ -90,10 +90,23 @@
 
           <br>
           <br>
+
           <input type="text" id="select-value" name="select-value" value="ID or Product Name">
           <br> 
           <br>
+
+          <div class="products-search-sort-options">
+            <h5> Group By </h5>
+
+            <input type="checkbox" id="order-products-by-stock" name="order-products-by-stock" value="order_by_stock">
+            <label for="order-by-date">Stock</label>
+
+            <input type="checkbox" id="order-by-customer-id" name="order-by-customer-id" value="order_by_customer_id">
+            <label for="order-by-customer-id">Price</label>
+          </div>
+
           <input type="submit" value="Submit">
+
         </form>
 
         <table class="product-query-table">
