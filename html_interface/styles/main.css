@@ -183,6 +183,21 @@ main {
 
 /* Shipment Items */
 
+.shipmentitems-view-shipments-wrapper {
+	margin: 1%;
+	padding: 1%;
+	border: 2px solid black;
+}
+
+.shipmentitems-results-table {
+	margin-top: 1%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border:1px solid black;
+}
+
+
 .shipmentitems-view-items-wrapper {
 	margin: 1%;
 	padding: 1%;

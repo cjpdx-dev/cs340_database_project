@@ -27,8 +27,6 @@
         |
         <li> <a href="shipments.html"> Shipments </a> </li>
         |
-        <li> <a href="shipment-items.html"> ShipmentsItems </a> </li>
-        |
         <li> <a href="products.html"> Products </a> </li>
         |
         <li> <a href="product-prices.html"> Product Prices </a> </li>
@@ -40,14 +38,37 @@
     </nav>
 
     <main>
-        <h2> Shipment Items </h2> 
+        <h2> Shipment & Shipment Items </h2> 
         
+        <h3> View Shipments </h3>
+
+        <div class="shipmentitems-view-shipments-wrapper">
+
+          
+        </div>
+
         <h3> View/Edit Shipment Items </h3>
 
         <div class="shipmentitems-view-items-wrapper">
           <label for="shipmentitems-id-label">Shipment ID</label>
           <br>
           <input type=text id="shipmentitems-id-label" name="shipmentitems-id-label" value="" disabled>
+          <div class="shipmentitems-details-wrapper">
+            <h4 style="display: inline; margin-left: 1%;">Details:</h4> 
+            <label for="shipment-item-qty">Item Count:</label>
+            <output type="text" id="shipment-item-qty" name="shipment-item-qty"> 3 </output>
+
+            <label for="total-shipment-weight">Total Weight: </label>
+            <output type="text" id="total-shipment-weight" name="total-shipment-weight"> 2 lbs</output>
+
+            <label for="total-shipment-volume">Total Size: </label>
+            <output type="text" id="total-shipment-volume" name="total-shipment-volume"> 76 in<sup>3</sup></output>
+
+            <label for="total-shipment-volume">Package Size: </label>
+            <output type="text" id="total-shipment-volume" name="total-shipment-volume"> Small </output>
+
+          </div>
+          
           <br>
           <table class="shipmentitems-results-table">
             <thead>
@@ -87,13 +108,10 @@
           </table>
 
           <br>
-          <select id="add-order-item-to-shipment">
+          <select style="float: right; margin-right: 1%;" id="add-order-item-to-shipment">
             <option value="default">Add Order Item</option>
             <option value="item1"> </option>
-
-
           </select>
-          <button id="add-shipment-item">Add Item From Order</button>
 
           <h4> Shipment Details </h4>
 
@@ -112,16 +130,12 @@
             <output type="text" id="total-shipment-volume" name="total-shipment-volume"> Small </output>
 
           </div>
-        
-          </div>
 
-        
-
+        </div>
     </main>
 
     <footer>
 
     </footer>
-
   </body>
 </html>
