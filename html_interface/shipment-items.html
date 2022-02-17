@@ -36,7 +36,7 @@
         <li> <a href="transactions.html"> Transactions </a> </li>
         |
         <li> <a href="pay-methods.html"> Pay Methods </a> </li>
-    </ul>
+      </ul>
     </nav>
 
     <main>
@@ -59,21 +59,18 @@
                 <th> Weight (lbs) </th>
                 <th> Size (in<sup>3</sup>) </th>
                 <th style="border:0;"></th>
-                <th style="border:0;"></th>
               </tr>
             </thead>
 
             <tbody>
-
               <tr>
                 <td> 1246 </td>
                 <td> Spatula </td>
                 <td> Silver </td>
                 <td> 2 </td>
                 <td> 0.5 </td>
-                <td> $25.98 </td> 
-                <td> <button class="shipmentitem-edit-button" id="shipmentitem-edit-button">Edit</button></td> 
-                <td> <button class="shipmentitem-delete-button" id="shipmentitem-delete-button">Delete</button></td> 
+                <td> 25.83 </td> 
+                <td> <button class="shipmentitem-remove-button" id="shipmentitem-remove-button">Remove</button></td> 
               </tr>
 
               <tr>
@@ -81,36 +78,42 @@
                 <td> Cookbook 1 </td>
                 <td> Red </td>
                 <td> 1 </td>
-                <td> $21.99 </td>
-                <td> $21.99 </td> 
-                <td> <button class="shipmentitem-edit-button" id="shipmentitem-edit-button">Edit</button></td> 
-                <td> <button class="shipmentitem-delete-button" id="shipmentitem-delete-button">Delete</button></td> 
+                <td> 1.5</td>
+                <td> 50.81 </td> 
+                <td> <button class="shipmentitem-remove-button" id="shipmentitem-remove-button">Remove</button></td> 
               </tr>
 
             </tbody>
           </table>
-          <tfoot>
 
-            <h4> Shipment Details </h4>
-
-            <div class="shipmentitems-details-wrapper">
-
-              <label for="shipment-item-qty">Item Qty </label>
-              <input style="" type="text" id="shipment-item-qty" name="shipment-item-qty" disabled>
+          <br>
+          <select id="add-order-item-to-shipment">
+            <option value="default">Add Order Item</option>
+            <option value="item1"> </option>
 
 
+          </select>
+          <button id="add-shipment-item">Add Item From Order</button>
 
-              <label for="total-shipment-weight">Weight (lbs)</label>
-              <input type="text" id="total-shipment-weight" name="total-shipment-weight" disabled>
+          <h4> Shipment Details </h4>
 
+          <div class="shipmentitems-details-wrapper">
 
+            <label for="shipment-item-qty">Item Count:</label>
+            <output type="text" id="shipment-item-qty" name="shipment-item-qty"> 3 </output>
 
-              <label for="total-shipment-volume">Volume (in^3) </label>
-              <input type="text" id="total-shipment-volume" name="total-shipment-volume" disabled>
-            </span>
+            <label for="total-shipment-weight">Total Weight: </label>
+            <output type="text" id="total-shipment-weight" name="total-shipment-weight"> 2 lbs</output>
 
-          </tfoot>
-        </div>
+            <label for="total-shipment-volume">Total Size: </label>
+            <output type="text" id="total-shipment-volume" name="total-shipment-volume"> 76 in<sup>3</sup></output>
+
+            <label for="total-shipment-volume">Package Size: </label>
+            <output type="text" id="total-shipment-volume" name="total-shipment-volume"> Small </output>
+
+          </div>
+        
+          </div>
 
         
 

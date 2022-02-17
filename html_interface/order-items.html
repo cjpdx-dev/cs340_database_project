@@ -49,6 +49,7 @@
           <br>
           <input type=text id="orderitems-id-label" name="orderitems-id-label" value="" disabled>
           <br>
+
           <table class="orderitems-results-table">
             <thead>
               <tr>
@@ -72,7 +73,7 @@
                 <td> $12.99 </td>
                 <td> $25.98 </td> 
                 <td> <button class="orderitem-edit-button" id="orderitem-edit-button">Edit</button></td> 
-                <td> <button class="orderitem-delete-button" id="orderitem-delete-button">Delete</button></td> 
+                <td> <button style="color: red;" class="orderitem-delete-button" id="orderitem-delete-button">Remove</button></td> 
               </tr>
 
               <tr>
@@ -83,7 +84,7 @@
                 <td> $21.99 </td>
                 <td> $21.99 </td> 
                 <td> <button class="orderitem-edit-button" id="orderitem-edit-button">Edit</button></td> 
-                <td> <button class="orderitem-delete-button" id="orderitem-delete-button">Delete</button></td> 
+                <td> <button style="color: red;" class="orderitem-delete-button" id="orderitem-delete-button">Remove</button></td> 
               </tr>
 
             </tbody>
@@ -95,43 +96,34 @@
       <h3> Add Order Item </h3>
 
         <div class="orderitem-add-item-wrapper">
-          <form> 
-            <table>
-              <thead>
-                <th> 
-                 <!-- Drop Down Item Name -->
-                </th>
-                
-                <th>
-                  <!-- Drop Down Item Color based on Name -->
-                </th>
-                
-                <th>
-                  <!-- Number Field for QTY -->
-                </th>
-              </thead>
+          <form class="orderitem-add-item-form" id="orderitem-add-item-form"> 
 
-              <tbody>
-                <td> 
-                  <!-- Drop Down Item Name -->
-                 </td>
-                 
-                 <td>
-                   <!-- Drop Down Item Color based on Name -->
-                 </td>
-                 
-                 <td>
-                   <!-- Number Field for QTY -->
-                 </td>
-              </tbody>
+            <label for="select-item-by-id">Product ID: </label>
+            <input type="text" style="width: 10%; " id="select-item-by-id" name="select-item-by-id"> 
 
-            </table>
+            <select onchange="" type="select" id="select-item-name" name="select-item-name" class="orderitem-item-selector">
+              <option value="default" selected>Name</option>
+              <option value="1246">Spatula</option>
+              <option value="1289"> Cookbook 1</option>
+            </select>
 
+            <select onchange="" type="select" id="select-item-color" name="select-item-color" class="orderitem-item-selector" disabled>
+              <option value="default" selected>Color</option>
+              <option value="silver">Silver</option>
+            </select>
+
+            <input type="number" id="select-item-qty" name="select-item-qty" class="orderitem-item-qty-input" disabled>
+            
+            <label for="orderitem-price-per-unit">Price Per Unit: </label>
+            <span style="display: inline; margin-right: 2%;" id="orderitem-price-per-unit">$12.99</span>
+            
+            <label for="orderitem-subtotal">Subtotal: </label>
+            <span style="display: inline;" id="orderitem-subtotal">$25.98</span>
+            <br>
+            <br>
+            <button style="float: left;"> Add To Order </button> 
           </form>
-
         </div>
-        
-
     </main>
 
     <footer>

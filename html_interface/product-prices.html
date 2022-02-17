@@ -36,24 +36,24 @@
         <li> <a href="transactions.html"> Transactions </a> </li>
         |
         <li> <a href="pay-methods.html"> Pay Methods </a> </li>
-    </ul>
+      </ul>
     </nav>
 
     <main>
-      <h2 style="text-align: center;">Item Prices</h2>
+      <h2>Item Prices</h2>
 
       <h3> Select Item Prices </h3>
 
-        <form>
+      <div class="itemprices-select-prices-wrapper">
+
+        <form class="itemprices-select-item-id-form">
           <input type="text" id="search-input" name="search-input" value="Product ID">
           <br>
           <br>
           <input type="submit" value="Submit">
         </form>
-        
-        <br>
   
-        <table style="width: 100%; height: 175px; overflow: auto;">
+        <table class="itemprices-prices-query-table">
           <tr>
             <th>Line</th>
             <th>PriceID</th>
@@ -78,25 +78,20 @@
             <td>2021/07/05 11:59:58</td>
           </tr>
         </table>
-        
-      <h3> Set New Product Price </h3>
-      <form>
-        <input type="text" id="set-product-price-id" name="set-product-price" value="Product ID">
-        <input type="text" id="set-product-price-new-price" name="set-product-price" value="New Product Price">
-        <br>
-        <br>
-        <input type="submit" value="Change Price">
-      </form>
-
-      <p> 
-        *Note* 
-        <br> 
-        We don't want database users to be able to edit or delete instances
-        of price history. Only look ups and new prices.
-      </p>
+      
+      </div>
 
     </main>
 
   </body>
+
+  <footer>
+    <p> 
+      *Note* 
+      <br> 
+      We don't want database users to be able to edit or delete instances
+      of price history. Only look ups and new prices.
+    </p>
+  </footer>
 
 </html>
