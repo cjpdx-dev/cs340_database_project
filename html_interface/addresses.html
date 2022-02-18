@@ -42,6 +42,9 @@
 
     <form>
       <h3>Create an Address:</h3>
+      <label for="customerid">Customer ID:</label><br />
+      <input type="text" id="customerid" name="customerid" required />
+      <br />
       <label for="address1">Address 1:</label><br />
       <input
         type="text"
@@ -63,12 +66,18 @@
 
     <form>
       <h3>Search for Address:</h3>
+      <label for="update_address"
+        >Enter Address ID of which address you wish to search:</label
+      ><br />
       <input type="text" id="search_address" name="search_address" />
       <input type="submit" value="Search" /> <br /><br />
     </form>
 
     <form>
       <h3>Update Address:</h3>
+      <label for="update_address"
+        >Enter Address ID of which address you wish to update:</label
+      ><br />
       <input
         type="text"
         required="address_id"
@@ -80,6 +89,9 @@
 
     <form>
       <h3>Delete Address:</h3>
+      <label for="update_address"
+        >Enter Address ID of which address you wish to delete:</label
+      ><br />
       <input
         type="text"
         required="address_id"
