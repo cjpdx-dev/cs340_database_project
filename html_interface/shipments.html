@@ -21,6 +21,8 @@
         |
         <li> <a href="addresses.html">Addresses</a> </li>
         |
+        <li> <a href="customer-addresses.html"> Customer Addresses </a></li>
+        |
         <li> <a href="orders.html"> Orders </a> </li>
         |
         <li> <a href="order-items.html"> Order Items </a></li>
@@ -34,7 +36,9 @@
         <li> <a href="transactions.html"> Transactions </a> </li>
         |
         <li> <a href="pay-methods.html"> Pay Methods </a> </li>
-      </ul>
+        |
+        <li> <a href="customer-pay-methods.html"> Customer Pay Methods </a></li>
+    </ul>
     </nav>
 
     <main>
@@ -43,7 +47,49 @@
         <h3> View Shipments </h3>
 
         <div class="shipmentitems-view-shipments-wrapper">
-
+          
+          <div>
+            <label for="shipmentitems-id-label">Order ID</label>
+            
+            <br>
+            
+            <input type=text id="shipmentitems-id-label" name="shipmentitems-id-label" value="1871" disabled>
+            
+            <div class="shipmentitems-details-wrapper">
+            
+            <br>
+            <table class="shipment-results-table">
+              <thead>
+                <tr>
+                  <th> Shipment #</th>
+                  <th> Shipment ID </th>
+                  <th> Date Created </th>
+                  <th> Tracking Number </th>
+                  <th> Item Count </th>
+                  <th> Total lbs</th>
+                  <th> Total Size </th>
+                  <th> Status </th>
+                  <th style="border:0;"></th>
+                  <th style="border:0;"></th>
+                </tr>
+              </thead>
+  
+              <tbody>
+                <tr>
+                  <td> 1 </td>
+                  <td> 18712</td>
+                  <td> 2021/1/12 </td>
+                  <td> 17H92JK1436P08 </td>
+                  <td> 3 </td>
+                  <td> 2 </td>
+                  <td> 76 (in<sup>3</sup>)  </td> 
+                  <td> Ready</td>
+                  <td> <button class="shipment-edit-button" id="shipment-edit-button">Edit</button></td> 
+                  <td> <button class="shipment-remove-button" id="shipment-remove-button">Remove</button></td> 
+                </tr>
+  
+              </tbody>
+            </table>
           
         </div>
 
@@ -52,7 +98,7 @@
         <div class="shipmentitems-view-items-wrapper">
           <label for="shipmentitems-id-label">Shipment ID</label>
           <br>
-          <input type=text id="shipmentitems-id-label" name="shipmentitems-id-label" value="" disabled>
+          <input type=text id="shipmentitems-id-label" name="shipmentitems-id-label" value="18712" disabled>
           <div class="shipmentitems-details-wrapper">
             <h4 style="display: inline; margin-left: 1%;">Details:</h4> 
             <label for="shipment-item-qty">Item Count:</label>
@@ -110,7 +156,7 @@
           <br>
           <select style="float: right; margin-right: 1%;" id="add-order-item-to-shipment">
             <option value="default">Add Order Item</option>
-            <option value="item1"> </option>
+            <option value="item1"> List of All Non-Packaged Items </option>
           </select>
 
           <h4> Shipment Details </h4>

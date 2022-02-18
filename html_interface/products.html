@@ -21,6 +21,8 @@
         |
         <li> <a href="addresses.html">Addresses</a> </li>
         |
+        <li> <a href="customer-addresses.html"> Customer Addresses </a></li>
+        |
         <li> <a href="orders.html"> Orders </a> </li>
         |
         <li> <a href="order-items.html"> Order Items </a></li>
@@ -34,6 +36,8 @@
         <li> <a href="transactions.html"> Transactions </a> </li>
         |
         <li> <a href="pay-methods.html"> Pay Methods </a> </li>
+        |
+        <li> <a href="customer-pay-methods.html"> Customer Pay Methods </a></li>
     </ul>
     </nav>
 
@@ -48,31 +52,59 @@
         <form class="product-create-form">
           
           <label for="new-product-name"> Name: </label>
+          <br>
           <input type="text" id="new-product-name" name="new-product-name">
 
+          <br>
+          <br>
+
           <label for="new-product-color"> Color: </label>
+          <br>
           <input type="text" id="new-product-color" name="new-product-color">
 
+          <br>
+          <br>
+
           <label for="new-product-volume"> Cubic Inches: </label>
+          <br>
           <input type="text" id="new-product-volume" name="new-product-volume">
 
+          <br>
+          <br>
+
           <label for="new-product-lbs"> Weight (lbs): </label>
+          <br>
           <input type="text" id="new-product-lbs" name="new-product-lbs">
 
+          <br>
+          <br>
+
           <label for="new-product-price"> Price: </label>
+          <br>
           <input type="text" id="new-product-price" name="new-product-price">
 
+          <br>
+          <br>
+
           <label for="new-product-stock-qty"> Stock Quantity: </label>
+          <br>
           <input type="text" id="new-product-stock-qty" name="new-product-stock-qty">
 
+          <br>
+          <br>
+
           <label for="new-reorder-qty"> Reorder Quantity: </label>
+          <br>
           <input type="text" id="new-product-reorder-qty" name="new-product-reorder-qty">
+
+          <br>
+          <br>
 
           <input type="submit" value="Submit">
         </form>
       </div>
 
-      <h3> Select Products </h3>
+      <h3> Select & Edit Products </h3>
       
       <div class="product-select-wrapper"> 
         <form class="product-select-form">
@@ -103,12 +135,15 @@
             <label for="order-by-customer-id">Price</label>
           </div>
 
+          <br>
+
           <input type="submit" value="Submit">
 
         </form>
 
         <table class="product-query-table">
           <caption>Results</caption>
+
           <tr>
             <th>ID</th>
             <th>Name</th>
@@ -120,7 +155,9 @@
             <th>Reorder Quantity</th>
             <th>Discontinued</th>
             <th style="border:0;"></th>
+            <th style="border:0;"></th>
           </tr>
+
           <tr> 
             <td>1</td>
             <td>example cookbook #1</td>
@@ -132,7 +169,9 @@
             <td>5</td>
             <td>False</td>
             <td> <button type="button"> Edit </button> </td>
+            <td> <button type="button"> Discontinue </button> </td>
           </tr>
+
           <tr>
             <td>2</td>
             <td>example cookbook #1</td>
@@ -144,43 +183,11 @@
             <td>5</td>
             <td>False</td>
             <td><button type="button"> Edit </button></td>
+            <td> <button type="button"> Discontinue </button> </td>
           </tr> 
+
         </table>
       </div>
-
-      <h3> Update Product </h3>
-
-      <div class="product-update-wrapper">
-        <form class="product-update-form">
-
-          <h4> (Select a row in the above table first) </h4>
-          <label for="static-product-id"> Product ID: </label>
-          <input type="text" id="static-product-id" name="static-product-id" value="[ID from selected row]" readonly>
-
-          <br>
-          <br>
-
-          <input type="checkbox" id="stock-qty" name="stock-qty" value="edit_stock">
-          <label for="stock-qty"> Edit Stock Quantity </label>
-          <input type="text" id="new-stock" name="new-stock" value="Update Quantity">
-
-          <br>
-          <br>
-
-          <input type="checkbox" id="reorder_qty" name="reorder_qty" value="edit_stock">
-          <label for="reorder_qty"> Edit Reorder Quantity </label>
-          <input type="text" id="new-stock" name="new-stock" value="Update Quantity">
-          
-          <br>
-          <br>
-          <input type="radio" id="set-discontinued" name="set-discontinued" value="set_discontinued">
-          <label for="set_discontinued"> Discontinue Product? </label>
-          
-          <br>
-          <br>
-          <input type="submit" value="Submit">
-        </form>
-      </div> 
 
     </main>
   </body>
