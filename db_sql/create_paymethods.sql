@@ -1,3 +1,5 @@
+
+-- This is not correct
 CREATE TABLE PayMethods(	
     pay_method_id int NOT NULL AUTO_INCREMENT,
     address_id int NOT NULL AUTO_INCREMENT,
@@ -8,6 +10,7 @@ CREATE TABLE PayMethods(
     FOREIGN KEY (address_id)
 )
 
+-- This is correct 
 CREATE TABLE PayMethods 
 (
     pay_method_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
