@@ -124,7 +124,7 @@ WHERE  	Shipments.shipment_id = 1 AND
 INSERT INTO ShipmentItems (shipment_id, product_id, item_qty)
 SELECT 	shipment_id,
 		product_id,
-		2 as item_qty
+		2 AS item_qty
 
 FROM  	Shipments, Products
 WHERE  	Shipments.shipment_id = 1 AND
