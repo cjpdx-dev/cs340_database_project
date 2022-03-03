@@ -38,21 +38,26 @@
         <li> <a href="pay-methods.html"> Pay Methods </a> </li>
         |
         <li> <a href="customer-pay-methods.html"> Customer Pay Methods </a></li>
-    </ul>
+     </ul>
     </nav>
 
     <main>
+
         <h2> Order Items </h2> 
 
         <h3> View Order Items </h3>
 
-        <div class="orderitems-view-all-items-wrapper">
+        <div class="form-wrapper">
+
           <label for="orderitems-id-label">Order ID</label>
-          <br>
-          <input type=text id="orderitems-id-label" name="orderitems-id-label" value="" disabled>
+
           <br>
 
-          <table class="orderitems-results-table">
+          <input type=text id="orderitems-id-label" name="orderitems-id-label" value="" disabled>
+          
+          <br>
+
+          <table class="query-output-table">
             <thead>
               <tr>
                 <th>Item ID</th>
@@ -74,8 +79,14 @@
                 <td> 2 </td>
                 <td> $12.99 </td>
                 <td> $25.98 </td> 
-                <td> <button class="orderitem-edit-button" id="orderitem-edit-button">Edit</button></td> 
-                <td> <button style="color: red;" class="orderitem-delete-button" id="orderitem-delete-button">Remove</button></td> 
+
+                <td>
+                  <button class="orderitem-edit-button" id="orderitem-edit-button">Edit</button>
+                </td> 
+
+                <td> 
+                  <button style="color: red;" class="orderitem-delete-button" id="orderitem-delete-button">Remove</button>
+                </td> 
               </tr>
 
               <tr>
@@ -85,19 +96,22 @@
                 <td> 1 </td>
                 <td> $21.99 </td>
                 <td> $21.99 </td> 
-                <td> <button class="orderitem-edit-button" id="orderitem-edit-button">Edit</button></td> 
-                <td> <button style="color: red;" class="orderitem-delete-button" id="orderitem-delete-button">Remove</button></td> 
+
+                <td> 
+                  <button class="orderitem-edit-button" id="orderitem-edit-button">Edit</button>
+                </td> 
+
+                <td> 
+                  <button style="color: red;" class="orderitem-delete-button" id="orderitem-delete-button">Remove</button>
+                </td> 
               </tr>
-
             </tbody>
-
           </table>
-        
         </div>
 
       <h3> Add Order Item </h3>
 
-        <div class="orderitem-add-item-wrapper">
+        <div class="form-wrapper">
           <form class="orderitem-add-item-form" id="orderitem-add-item-form"> 
 
             <label for="select-item-by-id">Product ID: </label>
@@ -121,9 +135,12 @@
             
             <label for="orderitem-subtotal">Subtotal: </label>
             <span style="display: inline;" id="orderitem-subtotal">$25.98</span>
+            
             <br>
             <br>
+            
             <button style="float: left;"> Add To Order </button> 
+          
           </form>
         </div>
     </main>

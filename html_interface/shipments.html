@@ -46,7 +46,7 @@
         
         <h3> View Shipments </h3>
 
-        <div class="shipmentitems-view-shipments-wrapper">
+        <div class="form-wrapper">
           
           <div>
             <label for="shipmentitems-id-label">Order ID</label>
@@ -55,10 +55,10 @@
             
             <input type=text id="shipmentitems-id-label" name="shipmentitems-id-label" value="1871" disabled>
             
-            <div class="shipmentitems-details-wrapper">
+            <div class="sub-form-seperator">
             
             <br>
-            <table class="shipment-results-table">
+            <table class="query-output-table">
               <thead>
                 <tr>
                   <th> Shipment #</th>
@@ -90,17 +90,20 @@
   
               </tbody>
             </table>
-          
         </div>
 
         <h3> View/Edit Shipment Items </h3>
 
-        <div class="shipmentitems-view-items-wrapper">
+        <div class="form-wrapper">
+
           <label for="shipmentitems-id-label">Shipment ID</label>
           <br>
           <input type=text id="shipmentitems-id-label" name="shipmentitems-id-label" value="18712" disabled>
-          <div class="shipmentitems-details-wrapper">
+
+          <div class="shipment-details">
+
             <h4 style="display: inline; margin-left: 1%;">Details:</h4> 
+
             <label for="shipment-item-qty">Item Count:</label>
             <output type="text" id="shipment-item-qty" name="shipment-item-qty"> 3 </output>
 
@@ -116,7 +119,9 @@
           </div>
           
           <br>
-          <table class="shipmentitems-results-table">
+
+          <table class="query-output-table">
+
             <thead>
               <tr>
                 <th> Item ID</th>
@@ -130,6 +135,7 @@
             </thead>
 
             <tbody>
+
               <tr>
                 <td> 1246 </td>
                 <td> Spatula </td>
@@ -137,7 +143,11 @@
                 <td> 2 </td>
                 <td> 0.5 </td>
                 <td> 25.83 </td> 
-                <td> <button class="shipmentitem-remove-button" id="shipmentitem-remove-button">Remove</button></td> 
+
+                <td> 
+                  <button class="shipmentitem-remove-button" id="shipmentitem-remove-button">Remove</button>
+                </td> 
+
               </tr>
 
               <tr>
@@ -147,7 +157,11 @@
                 <td> 1 </td>
                 <td> 1.5</td>
                 <td> 50.81 </td> 
-                <td> <button class="shipmentitem-remove-button" id="shipmentitem-remove-button">Remove</button></td> 
+
+                <td> 
+                  <button class="shipmentitem-remove-button" id="shipmentitem-remove-button">Remove</button>
+                </td> 
+
               </tr>
 
             </tbody>

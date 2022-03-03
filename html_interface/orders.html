@@ -46,9 +46,9 @@
 
       <h3> Create Order </h3>
 
-        <div class="order-create-wrapper">
+        <div class="form-wrapper">
           
-          <form class="order-create-find-customer-form">
+          <form class="insert-row-form">
             <label for="new-order-cust-id"> Customer ID </label>
             <br>
             <input type="text" id="new-order-cust-id" name="new-order-cust-id">
@@ -58,12 +58,12 @@
           </form>
 
           <br>
-          <div class="order-create-customer-found">
+          <div class="insert-row-status-alert">
             <p> [Customer Found? Show Customer Details. Else: Show "Invalid Customer ID"]</p>
           </div>
           <br>
 
-        <form class="order-create-form" id="orderCreateForm">
+        <form class="insert-row-form" id="orderCreateForm">
 
           <select type="select" id="newOrderPaymentSelector" name="newOrderPaymentSelector">
             <option value="default">-- Select Pay Method --</option>
@@ -106,11 +106,11 @@
 
       <h3> Search Orders </h3>
 
-      <div class="order-search-wrapper">
-        
+      <div class="form-wrapper">
+
         <h4> Search By Order ID </h4>
 
-        <form class="order-search-by-id-form">
+        <form class="search-by-form">
           <input type="text" id="display-order-cust-id" name="display-order-cust-id" value="Order ID">
           <br>
           <br>
@@ -119,37 +119,43 @@
 
         <h4> Search By Status/CustomerID </h4>
         
-        <form class="order-search-by-status-form">
-          <label for="search-by-status"> Search By: </label>
-          <select type="select" id="search-by-status" name="search-by-status">
-            <option value="defaut">All</option>
-            <option value="open">Open</option>
-            <option value="active">Active</option>
-            <option value="processed">Processed</option>
-            <option value="packaged">Packaged</option>
-            <option value="shipped">Shipped</option>
-            <option value="closed">Closed</option>
-          </select>
+          <form class="search-by-form">
+            
+            <label for="search-by-status"> Search By: </label>
+            
+            <select type="select" id="search-by-status" name="search-by-status">
+              <option value="defaut">All</option>
+              <option value="open">Open</option>
+              <option value="active">Active</option>
+              <option value="processed">Processed</option>
+              <option value="packaged">Packaged</option>
+              <option value="shipped">Shipped</option>
+              <option value="closed">Closed</option>
+            </select>
 
-          <input type="checkbox" id="allow-search-by-cust-id" name="allow-search-by-cust-id">
-          <input type="text" id="customer-id" name="customer-id" value="Customer ID" disabled>
+            <input type="checkbox" id="allow-search-by-cust-id" name="allow-search-by-cust-id">
+            
+            <input type="text" id="customer-id" name="customer-id" value="Customer ID" disabled>
 
-          <div class="order-search-sort-options">
-            <h5> Order By </h5>
+            <div class="search-sort-options">
 
-            <input type="checkbox" id="order-by-date" name="order-by-date" value="order_by_date">
-            <label for="order-by-date">Most Recent</label>
+              <h5> Order By </h5>
 
-            <input type="checkbox" id="order-by-customer-id" name="order-by-customer-id" value="order_by_customer_id">
-            <label for="order-by-customer-id">Item Count</label>
-          </div>
+              <input type="checkbox" id="order-by-date" name="order-by-date" value="order_by_date">
+              <label for="order-by-date">Most Recent</label>
 
-          <input type="submit" value="Submit">
-        </form>
+              <input type="checkbox" id="order-by-customer-id" name="order-by-customer-id" value="order_by_customer_id">
+              <label for="order-by-customer-id">Item Count</label>
+
+            </div>
+
+            <input type="submit" value="Submit">
+
+          </form>
 
         <h4> Search Results </h4>
 
-        <table class="order-query-output-table">
+        <table class="query-output-table">
 
           <thead>
             <tr>
@@ -160,6 +166,7 @@
               <th>Datetime Created</th>
               <th style="border:0;"> Order Options</th>
             </tr>
+          
           <tbody>
             <tr> 
               <td> 1 </td>
@@ -168,6 +175,7 @@
               <td> 56461 </td>
               <td> 2021/12/12 12:13:59 </td>
               <td class="order-options" style="border:0;"> 
+
                 <form class="order-edit-status-form">
                   <select onchange="this.form.submit()" type="select" id="set-order-status" name="set-order-status" class="order-status-selector">
                     <option value="set-status" selected>Set Status</option>
@@ -187,17 +195,13 @@
 
                 <button class="order-delete-button" id="order-delete-button">Cancel Order</button>
               </td>
-
             </tr>
+
           </tbody>
+
         </table>
       </div>
-
     </main>
-
-    <footer>
-
-    </footer>
-
+    <footer> </footer>
   </body>
 </html>

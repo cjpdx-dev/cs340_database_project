@@ -39,62 +39,87 @@ main {
 	margin: 1%;
 }
 
-/* Home Page */
-
-/* Customers */
-
-/* Addresses */
-
-/* Orders */
-.order-create-wrapper {
+.form-wrapper {
 	border: 2px solid black;
 	margin: 1%;
 	padding: 1%;
 }
 
-.order-create-order-form {
-	display: auto;
+.sub-form-seperator {
+
+    padding-bottom: 1%;
+    display: inline;
 }
 
-.order-search-wrapper {
-	border: 2px solid black;
-	margin: 1%;
-	padding: 1%;
+.insert-row-form {
+    border-bottom: 2px solid black;
+    padding-bottom: 1%;
 }
 
-.order-search-by-id-form {
-	border-bottom: 2px solid black;
+.insert-row-status-alert {
+    display: auto;
+}
+
+.search-by-form {
+    border-bottom: 2px solid black;
 	padding-bottom: 1%;
 }
 
-.order-search-by-status-form {
-	border-bottom: 2px solid black;
-	padding-bottom: 1%;
-}
-
-.order-search-sort-options {
-	margin-top: 1%;
+.search-sort-options {
+    margin-top: 1%;
 	margin-bottom: 1%;
 }
 
-.order-query-output-table {
-	border-collapse: collapse;
+.query-output-table {
+    margin-top: 1%;
+    border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
 	border:1px solid black;
 }
 
-.order-query-output-table thead {
-	padding-bottom: 1%;
+.query-output-table caption {
+	text-align: left;
+	padding-bottom:  1%;
 }
 
-.order-query-output-table tr {
-	margin-bottom: 1%;
+.query-output-table thead {
+    padding-bottom: 1%;
 }
 
-.order-query-output-table td {
-	border:1px solid black;
+.query-output-table tr {
+    margin-bottom: 1%;
+}
+
+.query-output-table td {
+    border:1px solid black;
 	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* Transactions */
+
+
+/* Pay Methods */
+
+
+/*
+CSS Order Classes
+*/
+
+.order-options {
+    display: auto;
+}
+
+.order-edit-status-form {
+    display: auto;
 }
 
 .order-status-selector {
@@ -120,45 +145,6 @@ main {
 
 
 /* Order Items */
-
-.orderitems-view-all-items-wrapper {
-	margin: 1%;
-	padding: 1%;
-	border: 2px solid black;
-}
-
-.orderitems-results-table {
-	margin-top: 1%;
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	border:1px solid black;
-}
-
-.orderitems-results-table td {
-	border:1px solid black;
-	text-align: center;
-}
-
-.orderitem-add-item-wrapper {
-	margin: 1%;
-	padding: 1%;
-	border: 2px solid black;
-}
-
-.orderitem-add-item-form table{
-	margin-top: 1%;
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	border:1px solid black;
-}
-
-.orderitem-add-item-form td {
-	border:1px solid black;
-	text-align: center;
-}
-
 .orderitem-item-selector {
 	display: inline;
 	width: 20%;
@@ -169,67 +155,8 @@ main {
 	width: 7.5%;
 }
 
-/* Shipments */
-.shipment-create-new-wrapper {
-	margin: 1%;
-	padding: 1%;
-	border: 2px solid black;
-}
 
-.shipment-create-new-form {
-	margin: 1%;
-	padding: 1%;
-}
-
-.shipment-results-table {
-	margin-top: 1%;
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	border:1px solid black;
-}
-
-.shipment-results-table td {
-	border:1px solid black;
-	text-align: center;
-}
-
-/* Shipment Items */
-
-.shipmentitems-view-shipments-wrapper {
-	margin: 1%;
-	padding: 1%;
-	border: 2px solid black;
-}
-
-.shipmentitems-results-table {
-	margin-top: 1%;
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	border:1px solid black;
-}
-
-
-.shipmentitems-view-items-wrapper {
-	margin: 1%;
-	padding: 1%;
-	border: 2px solid black;
-}
-
-.shipmentitems-results-table {
-	margin-top: 1%;
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	border:1px solid black;
-}
-
-.shipmentitems-results-table td {
-	border:1px solid black;
-	text-align: center;
-}
-
+/* Shipment & Shipment Items */
 .shipmentitems-details-wrapper {
 	display: inline;
 }
@@ -240,90 +167,8 @@ main {
 	padding-right: 1%;
 }
 
+
 /* Products */
 
-.product-create-wrapper {
-	border: 2px solid black;
-	width: 50%;
-}
-
-.product-create-form {
-	margin: 1%;
-	padding: 1%;
-
-}
-
-.product-create-form label{
-	padding: 1%;
-}
-
-.product-select-wrapper {
-	border: 2px solid black;
-}
-
-.product-select-form {
-	margin: 1%;
-}
-
-.product-query-table {
-	margin: 1%;
-	padding: 1%;
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	border:1px solid black;
-}
-
-.product-query-table caption {
-	text-align: left;
-}
-
-.product-query-table td {
-	border:2px solid black;
-	text-align: center;
-}
-
-.product-update-wrapper {
-	border: 2px solid black;
-	width: 50%;
-}
-
-.product-update-form {
-	margin: 1%;
-}
 
 /* Item Prices */
-.itemprices-select-prices-wrapper {
-	margin: 1%;
-	padding: 1%;
-	border: 2px solid black;
-}
-
-.itemprices-select-item-id-form {
-	margin: 1%;
-	padding: 1%;
-}
-
-.itemprices-prices-query-table{
-	margin-top: 1%;
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	border:1px solid black;
-}
-
-.itemprices-prices-query-table td {
-	border:1px solid black;
-	text-align: center;
-}
-
-/* Transactions */
-
-
-/* Pay Methods */
-
-
-
-
-
-	
