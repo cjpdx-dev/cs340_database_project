@@ -37,76 +37,118 @@
         <li> <a href="pay-methods.html"> Pay Methods </a> </li>
         |
         <li> <a href="customer-pay-methods.html"> Customer Pay Methods </a></li>
-    </ul>
+      </ul>
     </nav>
 
     <main>
+
       <h2>Addresses</h2>
+
+      <h3>Create an Address</h3>
+
+      <div class="form-wrapper">
+
+        <form class="insert-row-form">
+
+        <label for="customerid">*Customer ID</label>
+        <br />
+        <input type="text" id="customerid" name="customerid" required />
+        <br />
+        <br>
+        
+        <label for="address1">*Address 1</label>
+        <br />
+        <input type="text" required="customer_id" id="address1" name="address1" required />
+        <br />
+        <br>
+        
+        <label for="address2">Address 2</label>
+        <br />
+        <input type="text" id="address" name="address2" />
+        <br />
+        <br>
+        
+        <label for="address_city">*City</label><br />
+        <input type="text" id="address_city" name="address_city" />
+        <br />
+        <br>
+        
+        <label for="address_state">*State</label><br />
+        <input type="text" id="address_state" name="address_state" />
+        <br />
+        <br>
+        
+        <label for="address_zip">*Zip Code</label><br />
+        <input type="text" id="address_zip" name="address_zip" />
+        <br />
+        <br />
+
+        <label for="address_country">*Country</label><br />
+        <input type="text" id="address_country" name="address_country" />
+        <br />
+        <br />
+
+
+        <input type="submit" value="Submit" /> <br /><br />
+      </form>
+    </div>
+
+      <h3> Search for Address </h3>
+
+      <div class="form-wrapper">
+        <form class="search-by-form">
+
+          <h4> Search By Address ID </h4>
+          <input type="text" id="search_address" name="search_address" value="Address ID">
+          <br>
+          <br>
+          <input type="submit" value="Search" /> 
+        </form>
+
+          <table class="query-output-table">
+
+            <thead>
+              <tr>
+                <th> Address ID </th>
+                <th> First Name </th>
+                <th> Last Name </th>
+                <th> Address 1 </th>
+                <th> Address 2 </th>
+                <th> City </th>
+                <th> State </th>
+                <th> Zip Code </th>
+                <th> Country </th>
+                <th style="border:0;"> Options </th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <tr> 
+                <td> 1234 </td>
+                <td> Bob </td>
+                <td> Ross </td>
+                <td> 1728 Apple Street </td>
+                <td> Apartment 5 </td>
+                <td> Beaverton </td>
+                <td> OR </td>
+                <td> 97005 </td>
+                <td> USA </td>
+
+                <td class="query-update-options" style="border:0;"> 
+                  <form class="query-update-form">
+                    <button> Edit Address </button>
+                    <br>
+                    <button style="color: red;"> Delete Address </button>
+                  </form>
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+      </div>
     </main>
-
-    <form>
-      <h3>Create an Address:</h3>
-      <label for="customerid">Customer ID:</label><br />
-      <input type="text" id="customerid" name="customerid" required />
-      <br />
-      <label for="address1">Address 1:</label><br />
-      <input
-        type="text"
-        required="customer_id"
-        id="address"
-        name="address"
-      /><br />
-      <label for="address2">Address 2:</label><br />
-      <input type="text" id="address" name="address" /><br />
-      <label for="address_city">City:</label><br />
-      <input type="text" id="address_city" name="address_city" /><br />
-      <label for="address_state">State:</label><br />
-      <input type="text" id="address_state" name="address_state" /><br />
-      <label for="address_zip">Zip Code:</label><br />
-      <input type="text" id="address_zip" name="address_zip" /><br /><br />
-
-      <input type="submit" value="Submit" /> <br /><br />
-    </form>
-
-    <form>
-      <h3>Search for Address:</h3>
-      <label for="update_address"
-        >Enter Address ID of which address you wish to search:</label
-      ><br />
-      <input type="text" id="search_address" name="search_address" />
-      <input type="submit" value="Search" /> <br /><br />
-    </form>
-
-    <p> [Found Addresses Appear Here]</p>
-
-    <form>
-      <h3>Update Address:</h3>
-      <label for="update_address"
-        >Enter Address ID of which address you wish to update:</label
-      ><br />
-      <input
-        type="text"
-        required="address_id"
-        id="update_address"
-        name="update_address"
-      />
-      <input type="submit" value="Update Address" /> <br /><br />
-    </form>
-
-    [Address Being Updated And Updatable Fields Appears Here]
-
-    <form>
-      <h3>Delete Address:</h3>
-      <label for="update_address"
-        >Enter Address ID of which address you wish to delete:</label
-      ><br />
-      <input
-        type="text"
-        required="address_id"
-        id="delete_address"
-        name="delete_address"
-      />
-      <input type="submit" value="Delete Address" />
-    </form>
   </body>
 </html>

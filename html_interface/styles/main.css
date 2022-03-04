@@ -5,8 +5,6 @@ CS 340 - Winter 2022
 Oregon State University
 */
 
-/* All Pages */
-
 h1 {
 	text-align: center;
 	margin: 1%;
@@ -46,13 +44,10 @@ main {
 }
 
 .sub-form-seperator {
-
-    padding-bottom: 1%;
-    display: inline;
+	border-top: 2px solid black;
 }
 
 .insert-row-form {
-    border-bottom: 2px solid black;
     padding-bottom: 1%;
 }
 
@@ -61,7 +56,6 @@ main {
 }
 
 .search-by-form {
-    border-bottom: 2px solid black;
 	padding-bottom: 1%;
 }
 
@@ -96,23 +90,36 @@ main {
 	text-align: center;
 }
 
+.query-update-options {
+	padding-bottom: 1%;
+	padding-top:  1%;
+}
+
+.query-update-form {
+	display:  auto;
+}
+
+.query-update-form button {
+	width: 66%;
+	text-align: center;
+	margin-top:  1%;
+	margin-bottom: 1%;
+}
 
 
-
-
-
+/* Customers */
 
 
 
 /* Transactions */
 
 
+
 /* Pay Methods */
 
 
-/*
-CSS Order Classes
-*/
+
+/* CSS Order Classes */
 
 .order-options {
     display: auto;
@@ -144,7 +151,9 @@ CSS Order Classes
 }
 
 
+
 /* Order Items */
+
 .orderitem-item-selector {
 	display: inline;
 	width: 20%;
@@ -156,16 +165,41 @@ CSS Order Classes
 }
 
 
+
 /* Shipment & Shipment Items */
-.shipmentitems-details-wrapper {
+
+.shipment-details {
 	display: inline;
 }
 
-.shipmentitems-details-wrapper output {
-	width: 5%; 
-	padding-left: .5%;
-	padding-right: 1%;
+.shipment-details h4 {
+	display: inline;
+	padding-right:  1%;
 }
+
+.shipment-details label {
+	display: inline;
+}
+
+.shipment-details output {
+	display: inline;
+	padding-right:  2%;
+}
+
+.save-shipment-changes {
+	float: right;
+	margin-right:  2.75%;
+	margin-top:  1%;
+}
+
+.add-item-to-shipment-wrapper {
+	padding-bottom: 1%;
+}
+
+.button-add-empty-shipment {
+	margin-top:  1%;
+}
+
 
 
 /* Products */

@@ -49,14 +49,17 @@
         <div class="form-wrapper">
           
           <div>
-            <label for="shipmentitems-id-label">Order ID</label>
-            
-            <br>
+            <label for="shipmentitems-id-label">Order ID: </label>
             
             <input type=text id="shipmentitems-id-label" name="shipmentitems-id-label" value="1871" disabled>
             
+            <br>
+            <br>
+
             <div class="sub-form-seperator">
-            
+
+            <button class="button-add-empty-shipment" id="button-add-empty-shipment"> Add Shipment </button>
+
             <br>
             <table class="query-output-table">
               <thead>
@@ -69,8 +72,7 @@
                   <th> Total lbs</th>
                   <th> Total Size </th>
                   <th> Status </th>
-                  <th style="border:0;"></th>
-                  <th style="border:0;"></th>
+                  <th style="border:0;">Options</th>
                 </tr>
               </thead>
   
@@ -83,11 +85,30 @@
                   <td> 3 </td>
                   <td> 2 </td>
                   <td> 76 (in<sup>3</sup>)  </td> 
-                  <td> Ready</td>
-                  <td> <button class="shipment-edit-button" id="shipment-edit-button">Edit</button></td> 
-                  <td> <button class="shipment-remove-button" id="shipment-remove-button">Remove</button></td> 
+                  
+                  <td>
+                    <form class="query-update-form">
+                      <select onchange="this.form.submit()" type="select" id="set-order-status" name="set-order-status" class="order-status-selector">
+                        <option value="set-status" selected>Set Status</option>
+                        <option value="open">Open</option>
+                        <option value="assembled"> Assembled </option>
+                        <option value="packaged">Packaged</option>
+                        <option value="shipped">Shipped</option>
+                      </select>
+                    </form>
+                  </td>
+
+                  <td>
+                    <div class="query-update-options">
+                      <form class="query-update-form">
+                        <button>Edit</button>
+                        <br>
+                        <button style="color: red;">Remove</button>
+                      </form>
+                    </div>
+                  </td>
+
                 </tr>
-  
               </tbody>
             </table>
         </div>
@@ -96,13 +117,12 @@
 
         <div class="form-wrapper">
 
-          <label for="shipmentitems-id-label">Shipment ID</label>
+          <label style="display:  inline;" for="shipmentitems-id-label">Shipment ID</label>
           <br>
-          <input type=text id="shipmentitems-id-label" name="shipmentitems-id-label" value="18712" disabled>
-
+          <input style="display:  inline;" type=text id="shipmentitems-id-label" name="shipmentitems-id-label" value="18712" disabled>
+          
           <div class="shipment-details">
-
-            <h4 style="display: inline; margin-left: 1%;">Details:</h4> 
+            <h4>Details:</h4> 
 
             <label for="shipment-item-qty">Item Count:</label>
             <output type="text" id="shipment-item-qty" name="shipment-item-qty"> 3 </output>
@@ -115,6 +135,10 @@
 
             <label for="total-shipment-volume">Package Size: </label>
             <output type="text" id="total-shipment-volume" name="total-shipment-volume"> Small </output>
+
+
+            <button class="save-shipment-updates" id="save-shipment-changes"> Save Updates </button>
+            
 
           </div>
           
@@ -165,30 +189,22 @@
               </tr>
 
             </tbody>
+
           </table>
 
           <br>
-          <select style="float: right; margin-right: 1%;" id="add-order-item-to-shipment">
-            <option value="default">Add Order Item</option>
-            <option value="item1"> List of All Non-Packaged Items </option>
-          </select>
+          <div class="add-item-to-shipment-wrapper">
+            <h4> Add Item </h4>
+            <form class="add-item-to-shipment-form">
+              
+              <select style="float: left; margin-right: 1%;" id="add-item-to-shipment">
+                <option value="default">Order Items</option>
+                <option value="item1"> List of All Unpackaged Items </option>
+              </select>
 
-          <h4> Shipment Details </h4>
+              <button id="add-order-item-to-shipment"> Add To Shipment </button> 
 
-          <div class="shipmentitems-details-wrapper">
-
-            <label for="shipment-item-qty">Item Count:</label>
-            <output type="text" id="shipment-item-qty" name="shipment-item-qty"> 3 </output>
-
-            <label for="total-shipment-weight">Total Weight: </label>
-            <output type="text" id="total-shipment-weight" name="total-shipment-weight"> 2 lbs</output>
-
-            <label for="total-shipment-volume">Total Size: </label>
-            <output type="text" id="total-shipment-volume" name="total-shipment-volume"> 76 in<sup>3</sup></output>
-
-            <label for="total-shipment-volume">Package Size: </label>
-            <output type="text" id="total-shipment-volume" name="total-shipment-volume"> Small </output>
-
+            </form>
           </div>
 
         </div>

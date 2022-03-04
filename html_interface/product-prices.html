@@ -56,42 +56,51 @@
         </form>
   
         <table class="query-output-table">
-          <tr>
-            <th>Line</th>
-            <th>PriceID</th>
-            <th>Price</th>
-            <th>Date Active</th>
-            <th>Date Inactive</th>
-          </tr>
+          <thead>
+            <tr>
+              <th>Line</th>
+              <th>PriceID</th>
+              <th>Price</th>
+              <th>Date Active</th>
+              <th>Date Inactive</th>
+            </tr>
+          </thead>
   
-          <tr>
-            <td>1</td>
-            <td>417</td>
-            <td>12.99</td>
-            <td>2021/07/05 11:59:59</td>
-            <td>Current</td>
-          </tr>
-  
-          <tr>
-            <td>2</td>
-            <td>418</td>
-            <td>13.99</td>
-            <td>2021/05/012 11:59:59</td>
-            <td>2021/07/05 11:59:58</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>417</td>
+              <td>12.99</td>
+              <td>2021/07/05 11:59:59</td>
+              <td>Current</td>
+            </tr>
+    
+            <tr>
+              <td>2</td>
+              <td>418</td>
+              <td>13.99</td>
+              <td>2021/05/012 11:59:59</td>
+              <td>2021/07/05 11:59:58</td>
+            </tr>
+
+          </tbody>
+
         </table>
-      
-        <br>
+
+      </div>
         
-        <form>
-          <label for="item-price-set-new">New Price</label>
+    <div class="form-wrapper">
+
+        <h4> Update Price </h4>
+
+        <form class="insert-row-form">
+          <input type="text" id="item-price-set-new" name="item-price-set-new" value="New Price">
           <br>
           <br>
-          <input type="text" id="item-price-set-new" name="item-price-set-new">
           <input type="submit" value="Save Price">
         </form>
 
-      </div>
+    </div>
 
     </main>
 

@@ -46,40 +46,41 @@
 
         <h3> View Pay Methods </h3>
 
-        <div class="orderitems-view-all-items-wrapper">
+        <div class="form-wrapper">
+
           <label for="orderitems-id-label">Customer ID</label>
           <br>
           <input type=text id="orderitems-id-label" name="orderitems-id-label" value="">
           <br>
 
-          <table class="orderitems-results-table">
+                    <table class="query-output-table">
+
             <thead>
               <tr>
-                <th>Pay ID</th>
-                <th> Address ID </th>
-                <th> First Name </th>
-                <th> Last Name </th>
-                <th> Last 4 Digits </th>
-                <th> Expiration Date </th>
-                <th style="border:0;"></th>
-                <th style="border:0;"></th>
+                <th>Payment ID</th>
+                <th>Address ID</th>
+                <th>Card Type</th>
+                <th>Last 4 Digits</th>
+                <th>Expiration Date</th>
+                <th style="border:0;"> Options </th>
               </tr>
-            </thead>
             
             <tbody>
-              <tr>
-                <td> 1345 </td>
-                <td> 81764 </td>
-                <td> Bob </td>
-                <td> Ross </td>
-                <td> 8174 </td>
-                <td> Jan. 2023 </td> 
-                <td> <button class="orderitem-edit-button" id="orderitem-edit-button">Edit</button></td> 
-                <td> <button style="color: red;" class="orderitem-delete-button" id="orderitem-delete-button">Remove</button></td> 
+              <tr> 
+                <td> 1234 </td>
+                <td> 4567 </td> 
+                <td> VISA </td>
+                <td> 9876 </td>
+                <td> 2022/12/12</td>
+                <td class="query-update-options" style="border:0;"> 
+                  <form class="query-update-form">
+                    <button> View Orders </button>
+                    <br>
+                    <button> Remove Payment Method </button>
+                  </form>
+                </td>
               </tr>
-
             </tbody>
-
           </table>
         
         </div>

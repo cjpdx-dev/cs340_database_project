@@ -57,16 +57,16 @@
           
           <br>
 
+
           <table class="query-output-table">
             <thead>
               <tr>
-                <th>Item ID</th>
+                <th> Item ID </th>
                 <th> Item Name </th>
                 <th> Item Color </th>
                 <th> Qty </th>
                 <th> Cost Per Unit </th>
                 <th> Subtotal </th>
-                <th style="border:0;"></th>
                 <th style="border:0;"></th>
               </tr>
             </thead>
@@ -81,12 +81,15 @@
                 <td> $25.98 </td> 
 
                 <td>
-                  <button class="orderitem-edit-button" id="orderitem-edit-button">Edit</button>
+                  <div class="query-update-options">
+                    <form class="query-update-form">
+                      <button>Edit</button>
+                      <br>
+                      <button style="color: red;">Remove</button>
+                    </form>
+                  </div>
                 </td> 
 
-                <td> 
-                  <button style="color: red;" class="orderitem-delete-button" id="orderitem-delete-button">Remove</button>
-                </td> 
               </tr>
 
               <tr>
@@ -97,14 +100,18 @@
                 <td> $21.99 </td>
                 <td> $21.99 </td> 
 
-                <td> 
-                  <button class="orderitem-edit-button" id="orderitem-edit-button">Edit</button>
+                <td>
+                  <div class="query-update-options">
+                    <form class="query-update-form">
+                      <button>Edit</button>
+                      <br>
+                      <button style="color: red;">Remove</button>
+                    </form>
+                  </div>
                 </td> 
 
-                <td> 
-                  <button style="color: red;" class="orderitem-delete-button" id="orderitem-delete-button">Remove</button>
-                </td> 
               </tr>
+              
             </tbody>
           </table>
         </div>

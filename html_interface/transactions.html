@@ -42,58 +42,80 @@
     </nav>
 
     <main>
-      <h2 style="text-align: center;"> Transactions </h2>
+      <h2> Transactions </h2>
 
       <h3> View Transaction(s)</h3>
 
-        <form style="border: 2px black solid; width: fit-content; margin: 2%; padding:1%">
+      <div class="form-wrapper">
+        <form class="search-by-form">
           <h4>By Transaction ID</h4>
-          <label for="search-transaction-id">Transaction ID </label>
-          <br>
           <input type="text" id="search-transaction-id" name="search-transaction-id">
           <br>
           <br>
           <input type="submit" value="Submit">
         </form>
 
-        <form style="border: 2px black solid; width: fit-content; margin: 2%; padding:1%">
-          <h4> By Order ID </h4>
-          <label for="search-transaction-order-id">Order ID </label>
-          <br>
-          <input type="text" id="search-transaction-order-id" name="search-transaction-order-id">
-          <br>
-          <br>
-          <input type="submit" value="Submit">
-        </form>
+        <div class="sub-form-seperator" />
 
-        <form style="border: 2px black solid; width: fit-content; margin: 2%; padding:1%">
-          <h4> By Customer ID </h4>
-          <label for="search-transaction-cust-id">Customer ID </label>
-          <br>
-          <input type="text" id="search-transaction-cust-id" name="search-transaction-cust-id">
-          <br>
-          <br>
-          <input type="submit" value="Submit">
-        </form>
-
-        <form style="border: 2px black solid; width: fit-content; margin: 2%; padding:1%">
-          <h4> By Payment ID</h4>
-          <label for="search-transaction-pay-id"> Pay ID </label>
-          <br>
+        <form class="search-by-form">
+          <h4>By Payment ID</h4>
           <input type="text" id="search-transaction-pay-id" name="search-transaction-pay-id">
           <br>
           <br>
           <input type="submit" value="Submit">
         </form>
 
-        <p> Display Transaction Data Here </p>
+        <div class="sub-form-seperator" />
 
-        <p> Note: Transactions can't be modified or deleted. They also can't be created
-          manually, they only occur when an order is successfully processed.
-        </p>
+          <h4> Search Results </h4>
+
+            <table class="query-output-table">
+
+              <thead>
+                <tr>
+                  <th>Transaction ID</th>
+                  <th>Order ID</th>
+                  <th>Pay Method ID</th>
+                  <th>Amount Paid</th>
+                  <th>Datetime Charged</th>
+                  <th>Confirmation Code</th>
+                  <th>Checksum</th>
+                  <th>Datetime Success</th>
+                  <th style="border:0;"> Options </th>
+                </tr>
+              
+              <tbody>
+                <tr> 
+                  <td> 1234 </td>
+                  <td> 2345 </td>
+                  <td> 3456 </td> 
+                  <td> $12.99 </td>
+                  <td> 2021/11/27 12:12:12 </td>
+                  <td> 98187384928 </td>
+                  <td> F9J9D48J83J </td>
+                  <td> 2021/11/27 12:12:18 </td>
+                  <td class="query-update-options" style="border:0;"> 
+
+                    <form class="query-update-form">
+                      <button> View Order </button>
+                      <br>
+                      <button> View Pay Method </button>
+                    </form>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+      </div>
     </main>
 
+    <footer>
+      <p> 
+        Note: Transactions can't be modified or deleted. They also can't be created
+        manually, they only occur when an order is successfully processed.
+      </p>
+    </footer>
+    
   </body>
-
-
 </html>

@@ -57,7 +57,7 @@
             <input type="submit" value="Select Customer">
           </form>
 
-          <br>
+            <div class="sub-form-seperator"> </div>
           <div class="insert-row-status-alert">
             <p> [Customer Found? Show Customer Details. Else: Show "Invalid Customer ID"]</p>
           </div>
@@ -66,10 +66,10 @@
         <form class="insert-row-form" id="orderCreateForm">
 
           <select type="select" id="newOrderPaymentSelector" name="newOrderPaymentSelector">
-            <option value="default">-- Select Pay Method --</option>
-            <option value="card1">Card ending in 3812 - Exp. 04/22</option>
-            <option value="card2">Card ending in 8176 - Exp. 05/23</option>
-            <option value="addNewPayMethod">Add New Pay Method</option>
+            <option value="default"> -- Select Pay Method -- </option>
+            <option value="card1"> Card ending in 3812 - Exp. 04/22 </option>
+            <option value="card2"> Card ending in 8176 - Exp. 05/23 </option>
+            <option value="addNewPayMethod"> Add New Pay Method </option>
           </select>
 
           <script>
@@ -116,6 +116,8 @@
           <br>
           <input type="submit" value="Submit">
         </form>
+
+        <div class="sub-form-seperator"> </div>
 
         <h4> Search By Status/CustomerID </h4>
         
@@ -174,9 +176,9 @@
               <td> Chris Jacobs </td> 
               <td> 56461 </td>
               <td> 2021/12/12 12:13:59 </td>
-              <td class="order-options" style="border:0;"> 
+              <td class="query-update-options" style="border:0;"> 
 
-                <form class="order-edit-status-form">
+                <form class="query-update-form">
                   <select onchange="this.form.submit()" type="select" id="set-order-status" name="set-order-status" class="order-status-selector">
                     <option value="set-status" selected>Set Status</option>
                     <option value="open">Open</option>
@@ -187,8 +189,10 @@
                     <option value="closed">Closed</option>
                   </select>
 
-                <button class="order-edit-items-button" id="order-edit-items-button">Edit Items</button>
-                <button class="order-edit-shipments-button" id="order-edit-shipments-button">Edit Shipments</button>
+                  <button class="order-edit-items-button" id="order-edit-items-button">Edit Items</button>
+                  <br>
+                  <button class="order-edit-shipments-button" id="order-edit-shipments-button">Edit Shipments</button>
+                  
 
                 <br>
                 <br>
@@ -201,7 +205,10 @@
 
         </table>
       </div>
+      
     </main>
+
     <footer> </footer>
+
   </body>
 </html>
