@@ -1,99 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Addresses</title>
-    <link rel="stylesheet" href="styles/main.css">
-  </head>
-  
-  <body>
-    <script src="CustomerAddresses.js"></script>
 
-    <h1> CookNooks: Database Interface </h1>
+  <h2> Customer Addresses </h2> 
 
-    <nav>
-      <ul>
-        <li> <a href="index.html"> Home Page </a> </li>
-        |
-        <li> <a href="customers.html">Customers</a> </li>
-        |
-        <li> <a href="addresses.html">Addresses</a> </li>
-        |
-        <li> <a href="customer-addresses.html"> Customer Addresses </a></li>
-        |
-        <li> <a href="orders.html"> Orders </a> </li>
-        |
-        <li> <a href="order-items.html"> Order Items </a></li>
-        |
-        <li> <a href="shipments.html"> Shipments </a> </li>
-        |
-        <li> <a href="products.html"> Products </a> </li>
-        |
-        <li> <a href="product-prices.html"> Product Prices </a> </li>
-        |
-        <li> <a href="transactions.html"> Transactions </a> </li>
-        |
-        <li> <a href="pay-methods.html"> Pay Methods </a> </li>
-        |
-        <li> <a href="customer-pay-methods.html"> Customer Pay Methods </a></li>
-     </ul>
-    </nav>
+  <h3> View Addresses </h3>
 
-    <main>
-        <h2> Customer Addresses </h2> 
+  <div class="form-wrapper">
 
-        <h3> View Addresses </h3>
+    <label for="customer-id-label">Customer ID</label>
+    <br>
+    <input type=text id="customer-id-label" name="customer-id-label" value="">
+    <br>
 
-        <div class="form-wrapper">
+    <table class="query-output-table">
 
-          <label for="customer-id-label">Customer ID</label>
-          <br>
-          <input type=text id="customer-id-label" name="customer-id-label" value="">
-          <br>
+      <thead>
+        <tr>
+          <th> Address ID </th>
+          <th> Name </th>
+          <th> Address 1 </th>
+          <th> Address 2 </th>
+          <th> City </th>
+          <th> State </th>
+          <th> Zip Code </th>
+          <th> Country </th>
+        </tr>
+      
+      <tbody>
 
-          <table class="query-output-table">
+        {{#each CustomerAddress}}
+        <tr> 
+          <td> {{address_id}} </td>
+          <td> {{first_name}} {{last_name}} </td>
+          <td> {{address1}}</td>
+          <td> {{address2}}</td>
+          <td> {{city}} </td>
+          <td> {{state}} </td>
+          <td> {{zipcode}} </td>
+          <td> {{country}} </td>
+        </tr>
+        {{/each}}
 
-            <thead>
-              <tr>
-                <th> Address ID </th>
-                <th> First Name </th>
-                <th> Last Name </th>
-                <th> Address 1 </th>
-                <th> Address 2 </th>
-                <th> City </th>
-                <th> State </th>
-                <th> Zip Code </th>
-                <th> Country </th>
-                <th style="border:0;"> Options </th>
-              </tr>
-            
-            <tbody>
-              <tr> 
-                <td> 1234 </td>
-                <td> Bob </td>
-                <td> Ross </td>
-                <td> 1728 Apple Street </td>
-                <td> Apartment 5 </td>
-                <td> Beaverton </td>
-                <td> OR </td>
-                <td> 97005 </td>
-                <td> USA </td>
-                <td class="query-update-options" style="border:0;"> 
-                  <form class="query-update-form">
-                    <button> Remove Address </button>
-                  </form>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      </tbody>
+    </table>
 
-    </main>
-
-    <footer>
-
-    </footer>
-
-  </body>
 </html>

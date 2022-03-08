@@ -66,9 +66,13 @@
         <form class="insert-row-form" id="orderCreateForm">
 
           <select type="select" id="newOrderPaymentSelector" name="newOrderPaymentSelector">
+            
             <option value="default"> -- Select Pay Method -- </option>
-            <option value="card1"> Card ending in 3812 - Exp. 04/22 </option>
-            <option value="card2"> Card ending in 8176 - Exp. 05/23 </option>
+
+            {{#each PayMethod}}
+              <option value="{{pay_method_id}}"> Card ending in {{last_four_digits}} Expires {{expiration_date}}</option>
+            {{/each}}
+
             <option value="addNewPayMethod"> Add New Pay Method </option>
           </select>
 
@@ -83,16 +87,19 @@
 
           <select type="select" id="newOrderAddressSelector" name="newOrderAddressSelector" onchange="detectNewOrderAddress()">
             <option value="defaut">-- Select Address --</option>
-            <option value="address1">5178 NW Eastmore Dr. Portland OR 97128 </option>
-            <option value="address2">6137 SE Morland Ave. Beaverton OR 97005 </option>
+
+            {{#each Address}}
+              <option value="{{address_id}}">{{address1}} {{address2}} {{city}} {{state}} {{zipcode}}</option>
+            {{/each}}
             <option value="addNewShippingAddress">Add New Shipping Address</option>
+
           </select>
 
           <script>
             function detectNewOrderAddress() {
               var addressSelector = document.getElementById("newOrderAddressSelector");
               if (addressSelector.value === "addNewShippingAddress") {
-                window.location.href = "/html_interface/addresses.html";
+                window.location.href = "./html_interface/addresses.html";
               };
             }
           </script>
@@ -158,14 +165,14 @@
         <h4> Search Results </h4>
 
         <table class="query-output-table">
-
           <thead>
             <tr>
-              <th>Order ID</th>
-              <th>Customer ID</th>
-              <th>Customer Name</th>
-              <th>Transaction ID</th>
-              <th>Datetime Created</th>
+              <th> Order ID </th>
+              <th> Customer ID </th>
+              <th> Order Datetime </th>
+              <th> Status </th>
+              <th> Is Closed? </th>
+              <th> Datetime Closed </th>
               <th style="border:0;"> Order Options</th>
             </tr>
           
@@ -192,12 +199,12 @@
                   <button class="order-edit-items-button" id="order-edit-items-button">Edit Items</button>
                   <br>
                   <button class="order-edit-shipments-button" id="order-edit-shipments-button">Edit Shipments</button>
+                    
+                  <br>
+                  <br>
+                  <button class="order-delete-button" id="order-delete-button">Cancel Order</button>
                   
-
-                <br>
-                <br>
-
-                <button class="order-delete-button" id="order-delete-button">Cancel Order</button>
+                </form>
               </td>
             </tr>
 

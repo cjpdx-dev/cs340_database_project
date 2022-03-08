@@ -1,0 +1,89 @@
+<h2>Customer Cell Numbers</h2>
+
+        <h3>Add Customer Cell Number</h3>
+
+          <div class="form-wrapper">
+
+            <form class="insert-row-form" >
+
+              <label for="customer_id">Customer ID</label> 
+              <br>
+              <input type="text" id="customer_id" name="customer_id" value="{{customer_id}}"> 
+              <br>
+              <br>
+
+              <label for="insert_cell_number"> New Cell Number </label>
+              <br>
+              <input type="text", id="cell_number" name="cell_number">
+              <br>
+              <br> 
+
+              <input type="submit" value="Add Cell Nunber">
+
+            </form>
+
+          </div>
+
+        <h3>Cell Number Look Up</h3>
+
+        <div class="form-wrapper">
+
+          <h4> Search By Customer ID </h4>
+
+          <form class="search-by-form">
+            <input type="text" id="search_customer_id" name="search_customer_id" value="Customer ID">
+            <br>
+            <br>
+            <input type="submit" value="Search Customers">
+          </form>
+
+          <div class="sub-form-seperator">
+          </div>
+
+          <h4> Search By Cell Number </h4>
+
+            <form class="search-by-form">
+              <input type="text" id="search_customer_cell" name="search_customer_cell" />
+              <br>
+              <br>
+              <input type="submit" value="Search Customers">
+            </form>
+
+          <h4> Search Results </h4>
+
+            <table class="query-output-table">
+
+              <thead>
+                <tr>
+                  <th>Cell ID</th>
+                  <th>First Name </th>
+                  <th>Last Name</th>
+                  <th>Cell Number</th>
+                  <th style="border:0;"> Options </th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                {{#each CellNumbers}}
+                <tr> 
+                  <td> {{cell_id}} </td>
+                  <td> {{first_name}} </td>
+                  <td> {{last_name}} </td> 
+                  <td> {{cell_number}} </td>
+
+                  <td class="query-update-options" style="border:0;"> 
+                    <form class="query-update-form">
+                      <button> Edit Cell Number </button>
+                      <br>
+                      <button> Delete Cell Number </button>
+                    </form>
+                  </td>
+
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+
+        </div>
+
+</html>
